@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="style.css"></head><body>
+<div class="canvas" style="width:1340px">
+  <div class="title">Métodu Kria Dataset Big Data ho Anomalia (5 GB · 10 GB · 20 GB)</div>
+  <div class="sub">Hahú husi dadus reál (seed) → modelu fíziku rede → hatama events anomalia (ground truth) → eskala to'o tamañu alvu</div>
+  <div class="row">
+    <div class="col" style="gap:10px;width:225px">
+      <div class="box gray"><h4>Seed 1 · UCI (reál)</h4><p>ElectricityLoadDiagrams: padraun fulan-fulan kliente 264</p></div>
+      <div class="box gray"><h4>Seed 2 · Open-Meteo (reál)</h4><p>Temperature oras-oras 2025, kapitál municipality 14 (122,640 valór)</p></div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="box" style="width:215px"><h4>Meter master</h4><ul><li>Meters distribui tuir populasaun</li><li>Customer type 78/15/5/2 %</li><li>kVA, power factor, distance</li></ul></div>
+    <div class="arrow">→</div>
+    <div class="box" style="width:215px"><h4>Modelu fíziku rede</h4><ul><li>Load shape × weekend × temperature × fulan</li><li>Voltage drop iha feeder</li><li>Frequency 50 Hz (AR)</li></ul></div>
+    <div class="arrow">→</div>
+    <div class="box red" style="width:250px"><h4>Hatama events anomalia</h4><div class="out" style="flex-wrap:wrap;gap:4px"><span class="pill" style="background:#e8f0fb;color:#2a5fb0">Voltajen Tun</span><span class="pill" style="background:#fdeee6;color:#b5491d">Voltajen Sa'e Liu</span><span class="pill" style="background:#e3f6ef;color:#12805a">Frekuénsia La Estável</span><span class="pill" style="background:#fdf3dc;color:#9a6a00">Karga Liu</span><span class="pill" style="background:#fbe9f0;color:#b03a6a">Na'ok Eletrisidade</span><span class="pill" style="background:#e3f2e3;color:#106b10">Kontador Aat</span></div><p style="margin-top:6px">Label = event ne'ebé ativu (ground truth), la'ós threshold</p></div>
+    <div class="arrow">→</div>
+    <div class="col" style="gap:8px;width:200px">
+      <div class="box amber"><h4>Measured values</h4><p>Valór loos + sensor noise; missing ~0.3 %, duplicate ~0.2 %, invalid ~0.1 %</p></div>
+      <div class="box green"><h4>CSV part-file ~101 MB</h4><p>5 GB · 10 GB · 20 GB (319.1 M records, 35.8 GB)</p></div>
+    </div>
+  </div>
+</div></body></html>

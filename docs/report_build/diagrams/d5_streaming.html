@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="style.css"></head><body>
+<div class="canvas" style="width:1340px">
+  <div class="title">Fluxu Real-Time: Bot → FastAPI → Kafka → Spark Streaming → Random Forest → MySQL → Streamlit</div>
+  <div class="sub">Kada 2 s bot haruka readings 281; kada 3 s Spark prosesa offset foun hotu (micro-batch, at-least-once)</div>
+  <div class="row">
+    <div class="box gray" style="width:150px"><h4>Bot</h4><p>Meters 281, JSON, true_type (evaluation only)</p></div>
+    <div class="arrow">→</div>
+    <div class="box dark" style="width:150px"><h4>FastAPI</h4><p>Pydantic validation, publish ba Kafka</p></div>
+    <div class="arrow">→</div>
+    <div class="box amber" style="width:150px"><h4>Kafka</h4><p>Partition 0 · 1 · 2, offset kada mensajen</p></div>
+    <div class="arrow">→</div>
+    <div class="box" style="width:250px"><h4>Spark micro-batch</h4><ol style="margin:0;padding-left:16px;font-size:12.5px;color:#33425a"><li>read offsets → from_json</li><li>validation + dropDuplicates</li><li>broadcast join meter master</li><li>feature engineering</li><li>window 1 min, watermark 2 min</li></ol></div>
+    <div class="arrow">→</div>
+    <div class="box purple" style="width:150px"><h4>Random Forest</h4><p>Tipu anomalia + Anomaly Score; event se Score ≥ 0.6</p></div>
+    <div class="arrow">→</div>
+    <div class="box green" style="width:185px"><h4>MySQL</h4><p>tbl_readings_live, tbl_stream_agg, tbl_anomaly_events, tbl_stream_batches, offsets</p></div>
+  </div>
+</div></body></html>

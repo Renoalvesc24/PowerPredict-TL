@@ -1,0 +1,15 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="style.css"></head><body>
+<div class="canvas" style="width:1340px">
+  <div class="title">Dezeñu Evaluasaun: Fahe Dadus Tuir Meter (Meter-Level Split)</div>
+  <div class="sub">Episódiu Na'ok Eletrisidade ka Kontador Aat naruk (loron to'o semana) la bele iha training no test hotu</div>
+  <div class="row">
+    <div class="box" style="width:230px"><h4>Dataset 20 GB (clean)</h4><p>181,269,709 readings · meters 20,776 · anomalia 3.80 %</p></div>
+    <div class="arrow">→</div>
+    <div class="col" style="gap:12px;width:430px">
+      <div class="box purple"><h4>Meters training (4 husi 5) → Training set</h4><p>Normal undersampled ba 600,000 + anomalia hotu (to'o 80,000 / tipu) = 1,079,003 readings. Cross-validation 3-fold StratifiedGroupKFold (group = meter)</p></div>
+      <div class="box green"><h4>Meters test (1 husi 5, crc32(meter_id) mod 5 = 0) → Test set</h4><p>Distribuisaun natural: 999,536 readings (sample) — Spark MLlib test iha readings 36,958,516 hotu</p></div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="box amber" style="width:300px"><h4>Métrika</h4><ul><li>Precision, Recall, F1-Score (anomalia vs normal)</li><li>PR-AUC, ROC-AUC, False Positive Rate</li><li>Macro F1 + Confusion Matrix (tipu 7)</li><li>Live: prediction vs ground truth bot</li></ul></div>
+  </div>
+</div></body></html>

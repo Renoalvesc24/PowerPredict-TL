@@ -1,0 +1,2725 @@
+{
+  "sizes": [
+    "5GB",
+    "10GB",
+    "20GB"
+  ],
+  "main": "20GB",
+  "data_dir": "D:\\powerpredict-data",
+  "datasets": [
+    {
+      "label": "5GB",
+      "size_mb": 5217.0,
+      "rows": 45590438,
+      "meters": 5194,
+      "parts": 52,
+      "anomaly_pct": {
+        "Normal": 96.201,
+        "Voltage Sag": 1.159,
+        "Overload": 1.078,
+        "Frequency Deviation": 0.775,
+        "Energy Theft": 0.507,
+        "Over-Voltage": 0.198,
+        "Meter Fault": 0.081
+      },
+      "anomaly_counts": {
+        "Normal": 43858550,
+        "Voltage Sag": 528596,
+        "Frequency Deviation": 353472,
+        "Overload": 491534,
+        "Energy Theft": 231126,
+        "Over-Voltage": 90272,
+        "Meter Fault": 36888
+      },
+      "seconds": 20.5,
+      "injected_anomalies": {
+        "Voltage Sag": "12-48 feeder events / municipality / year, -14..-35 V, 1-6 h (70 % at the evening peak)",
+        "Over-Voltage": "~10 night-time events / municipality / year, +22..+34 V, 1-3 h",
+        "Frequency Deviation": "38-68 generator-trip events / grid / year, 0.6-1.6 Hz away from 50 Hz, 1-3 h",
+        "Overload": "~6 events / meter / year at 1.05-1.6 x contract, plus natural peaks above 100 %",
+        "Energy Theft": "6 % of meters, 1-3 episodes of 3-30 days, the meter registers only 5-55 %",
+        "Meter Fault": "8 % of meters, one 1-7 day current-channel fault (x0.15-0.5 or x1.8-3.0)"
+      },
+      "bytes": 5470398249
+    },
+    {
+      "label": "10GB",
+      "size_mb": 10445.1,
+      "rows": 91180877,
+      "meters": 10388,
+      "parts": 104,
+      "anomaly_pct": {
+        "Normal": 96.211,
+        "Voltage Sag": 1.159,
+        "Overload": 1.056,
+        "Frequency Deviation": 0.775,
+        "Energy Theft": 0.517,
+        "Over-Voltage": 0.198,
+        "Meter Fault": 0.083
+      },
+      "anomaly_counts": {
+        "Normal": 87726270,
+        "Voltage Sag": 1057197,
+        "Frequency Deviation": 706848,
+        "Overload": 962973,
+        "Energy Theft": 471346,
+        "Over-Voltage": 180642,
+        "Meter Fault": 75601
+      },
+      "seconds": 19.3,
+      "injected_anomalies": {
+        "Voltage Sag": "12-48 feeder events / municipality / year, -14..-35 V, 1-6 h (70 % at the evening peak)",
+        "Over-Voltage": "~10 night-time events / municipality / year, +22..+34 V, 1-3 h",
+        "Frequency Deviation": "38-68 generator-trip events / grid / year, 0.6-1.6 Hz away from 50 Hz, 1-3 h",
+        "Overload": "~6 events / meter / year at 1.05-1.6 x contract, plus natural peaks above 100 %",
+        "Energy Theft": "6 % of meters, 1-3 episodes of 3-30 days, the meter registers only 5-55 %",
+        "Meter Fault": "8 % of meters, one 1-7 day current-channel fault (x0.15-0.5 or x1.8-3.0)"
+      },
+      "bytes": 10952472016
+    },
+    {
+      "label": "20GB",
+      "size_mb": 20981.2,
+      "rows": 182361755,
+      "meters": 20776,
+      "parts": 208,
+      "anomaly_pct": {
+        "Normal": 96.202,
+        "Voltage Sag": 1.16,
+        "Overload": 1.065,
+        "Frequency Deviation": 0.775,
+        "Energy Theft": 0.513,
+        "Over-Voltage": 0.198,
+        "Meter Fault": 0.087
+      },
+      "anomaly_counts": {
+        "Normal": 175435478,
+        "Voltage Sag": 2114800,
+        "Frequency Deviation": 1413818,
+        "Overload": 1941766,
+        "Energy Theft": 935954,
+        "Over-Voltage": 361042,
+        "Meter Fault": 158897
+      },
+      "seconds": 39.0,
+      "injected_anomalies": {
+        "Voltage Sag": "12-48 feeder events / municipality / year, -14..-35 V, 1-6 h (70 % at the evening peak)",
+        "Over-Voltage": "~10 night-time events / municipality / year, +22..+34 V, 1-3 h",
+        "Frequency Deviation": "38-68 generator-trip events / grid / year, 0.6-1.6 Hz away from 50 Hz, 1-3 h",
+        "Overload": "~6 events / meter / year at 1.05-1.6 x contract, plus natural peaks above 100 %",
+        "Energy Theft": "6 % of meters, 1-3 episodes of 3-30 days, the meter registers only 5-55 %",
+        "Meter Fault": "8 % of meters, one 1-7 day current-channel fault (x0.15-0.5 or x1.8-3.0)"
+      },
+      "bytes": 22000407607
+    }
+  ],
+  "weather_rows": 122640,
+  "sample_rows": [
+    {
+      "reading_id": 844769,
+      "timestamp": "2025-06-08 16:00:00",
+      "meter_id": "TL-AIL-000097",
+      "municipality": "Aileu",
+      "customer_type": "commercial",
+      "contracted_kva": 7.7,
+      "phase": "three",
+      "voltage_v": 220.42,
+      "current_a": 5.56,
+      "power_kw": 2.445,
+      "energy_kwh": 2.445,
+      "power_factor": 0.678,
+      "frequency_hz": 49.93,
+      "temperature_c": 24.7,
+      "anomaly_type": "Normal"
+    },
+    {
+      "reading_id": 790416,
+      "timestamp": "2025-03-25 23:00:00",
+      "meter_id": "TL-AIL-000091",
+      "municipality": "Aileu",
+      "customer_type": "residential",
+      "contracted_kva": 1.3,
+      "phase": "single",
+      "voltage_v": 200.65,
+      "current_a": 3.56,
+      "power_kw": 0.663,
+      "energy_kwh": 0.663,
+      "power_factor": 0.939,
+      "frequency_hz": 49.9,
+      "temperature_c": 21.3,
+      "anomaly_type": "Voltage Sag"
+    },
+    {
+      "reading_id": 782835,
+      "timestamp": "2025-05-14 02:00:00",
+      "meter_id": "TL-AIL-000090",
+      "municipality": "Aileu",
+      "customer_type": "residential",
+      "contracted_kva": 3.5,
+      "phase": "single",
+      "voltage_v": 249.5,
+      "current_a": 2.53,
+      "power_kw": 0.583,
+      "energy_kwh": 0.583,
+      "power_factor": 0.949,
+      "frequency_hz": 50.01,
+      "temperature_c": 17.8,
+      "anomaly_type": "Over-Voltage"
+    },
+    {
+      "reading_id": 352162,
+      "timestamp": "2025-03-15 09:00:00",
+      "meter_id": "TL-AIL-000041",
+      "municipality": "Aileu",
+      "customer_type": "residential",
+      "contracted_kva": 2.2,
+      "phase": "single",
+      "voltage_v": 218.16,
+      "current_a": 3.57,
+      "power_kw": 0.683,
+      "energy_kwh": 0.683,
+      "power_factor": 0.892,
+      "frequency_hz": 49.26,
+      "temperature_c": 22.8,
+      "anomaly_type": "Frequency Deviation"
+    },
+    {
+      "reading_id": 360751,
+      "timestamp": "2025-03-08 06:00:00",
+      "meter_id": "TL-AIL-000042",
+      "municipality": "Aileu",
+      "customer_type": "commercial",
+      "contracted_kva": 16.5,
+      "phase": "three",
+      "voltage_v": 214.32,
+      "current_a": 35.78,
+      "power_kw": 20.629,
+      "energy_kwh": 20.629,
+      "power_factor": 0.891,
+      "frequency_hz": 49.94,
+      "temperature_c": 19.5,
+      "anomaly_type": "Overload"
+    },
+    {
+      "reading_id": 229104,
+      "timestamp": "2025-02-25 23:00:00",
+      "meter_id": "TL-AIL-000027",
+      "municipality": "Aileu",
+      "customer_type": "commercial",
+      "contracted_kva": 7.7,
+      "phase": "three",
+      "voltage_v": 218.35,
+      "current_a": 0.15,
+      "power_kw": 0.084,
+      "energy_kwh": 0.084,
+      "power_factor": 0.843,
+      "frequency_hz": 50.07,
+      "temperature_c": 20.0,
+      "anomaly_type": "Energy Theft"
+    },
+    {
+      "reading_id": 755259,
+      "timestamp": "2025-03-21 02:00:00",
+      "meter_id": "TL-AIL-000087",
+      "municipality": "Aileu",
+      "customer_type": "commercial",
+      "contracted_kva": 11.0,
+      "phase": "three",
+      "voltage_v": 221.47,
+      "current_a": 0.31,
+      "power_kw": 0.917,
+      "energy_kwh": 0.917,
+      "power_factor": 0.902,
+      "frequency_hz": 49.95,
+      "temperature_c": 19.8,
+      "anomaly_type": "Meter Fault"
+    }
+  ],
+  "runs": [
+    {
+      "id": 7,
+      "job_name": "spark_batch_etl",
+      "engine": "apache-spark",
+      "dataset": "5GB",
+      "status": "success",
+      "seconds": 214.113,
+      "input_rows": 45590438,
+      "output_rows": 45317415,
+      "input_bytes": 5470398249,
+      "details": {
+        "timings_s": {
+          "1_read_csv": 29.02,
+          "2_quality_profile": 11.17,
+          "3_clean_features_join": 68.71,
+          "4_anomaly_analytics": 36.87,
+          "5_train_test_samples": 18.2,
+          "6_write_curated_parquet": 46.54
+        },
+        "removed_rows": 273023,
+        "class_distribution": {
+          "Meter Fault": 36669,
+          "Frequency Deviation": 351371,
+          "Overload": 488486,
+          "Voltage Sag": 525378,
+          "Over-Voltage": 89607,
+          "Energy Theft": 229793,
+          "Normal": 43596111
+        },
+        "train_class_counts": {
+          "Meter Fault": 30067,
+          "Frequency Deviation": 281222,
+          "Overload": 388326,
+          "Voltage Sag": 418799,
+          "Over-Voltage": 71389,
+          "Energy Theft": 179536,
+          "Normal": 34838884
+        },
+        "train_sample_rows": 1020914,
+        "test_sample_rows": 1001088,
+        "test_meter_rows": 9109192,
+        "curated_rows": 45317415,
+        "cores": 32,
+        "spark_version": "3.5.3"
+      }
+    },
+    {
+      "id": 9,
+      "job_name": "spark_batch_etl",
+      "engine": "apache-spark",
+      "dataset": "10GB",
+      "status": "success",
+      "seconds": 304.236,
+      "input_rows": 91180877,
+      "output_rows": 90634831,
+      "input_bytes": 10952472016,
+      "details": {
+        "timings_s": {
+          "1_read_csv": 53.28,
+          "2_quality_profile": 24.73,
+          "3_clean_features_join": 98.13,
+          "4_anomaly_analytics": 56.48,
+          "5_train_test_samples": 20.56,
+          "6_write_curated_parquet": 48.05
+        },
+        "removed_rows": 546046,
+        "class_distribution": {
+          "Meter Fault": 75138,
+          "Frequency Deviation": 702659,
+          "Overload": 957099,
+          "Voltage Sag": 1050791,
+          "Over-Voltage": 179255,
+          "Energy Theft": 468574,
+          "Normal": 87201315
+        },
+        "train_class_counts": {
+          "Meter Fault": 60250,
+          "Frequency Deviation": 560099,
+          "Overload": 780206,
+          "Voltage Sag": 835113,
+          "Over-Voltage": 142606,
+          "Energy Theft": 360648,
+          "Normal": 69503568
+        },
+        "train_sample_rows": 1061976,
+        "test_sample_rows": 999387,
+        "test_meter_rows": 18392341,
+        "curated_rows": 90634831,
+        "cores": 16,
+        "spark_version": "3.5.3"
+      }
+    },
+    {
+      "id": 11,
+      "job_name": "spark_batch_etl",
+      "engine": "apache-spark",
+      "dataset": "20GB",
+      "status": "success",
+      "seconds": 752.613,
+      "input_rows": 182361755,
+      "output_rows": 181269709,
+      "input_bytes": 22000407607,
+      "details": {
+        "timings_s": {
+          "1_read_csv": 91.24,
+          "2_quality_profile": 37.42,
+          "3_clean_features_join": 173.69,
+          "4_anomaly_analytics": 172.91,
+          "5_train_test_samples": 35.94,
+          "6_write_curated_parquet": 237.95
+        },
+        "removed_rows": 1092046,
+        "class_distribution": {
+          "Overload": 1930052,
+          "Over-Voltage": 358364,
+          "Energy Theft": 930389,
+          "Frequency Deviation": 1405483,
+          "Meter Fault": 157919,
+          "Normal": 174385155,
+          "Voltage Sag": 2102347
+        },
+        "train_class_counts": {
+          "Overload": 1526004,
+          "Over-Voltage": 285292,
+          "Energy Theft": 714965,
+          "Frequency Deviation": 1118762,
+          "Meter Fault": 123188,
+          "Normal": 138867634,
+          "Voltage Sag": 1675348
+        },
+        "train_sample_rows": 1079003,
+        "test_sample_rows": 999536,
+        "test_meter_rows": 36958516,
+        "curated_rows": 181269709,
+        "cores": 16,
+        "spark_version": "3.5.3"
+      }
+    },
+    {
+      "id": 12,
+      "job_name": "spark_mllib_train",
+      "engine": "spark-mllib",
+      "dataset": "20GB",
+      "status": "success",
+      "seconds": 566.446,
+      "input_rows": 39257166,
+      "output_rows": 36958516,
+      "input_bytes": null,
+      "details": {
+        "accuracy": 0.9883317825856428,
+        "anomaly_f1": 0.8670992439277451,
+        "train_seconds": 402.4158136844635,
+        "n_train": 2298650,
+        "n_test": 36958516
+      }
+    }
+  ],
+  "quality": {
+    "5GB": [
+      {
+        "check_name": "duplicate",
+        "column_name": "meter_id+timestamp",
+        "n_rows": 90998,
+        "pct": 0.1996
+      },
+      {
+        "check_name": "invalid",
+        "column_name": "energy_kwh",
+        "n_rows": 1,
+        "pct": 0.0
+      },
+      {
+        "check_name": "invalid",
+        "column_name": "power_factor",
+        "n_rows": 11397,
+        "pct": 0.025
+      },
+      {
+        "check_name": "invalid",
+        "column_name": "power_kw",
+        "n_rows": 11398,
+        "pct": 0.025
+      },
+      {
+        "check_name": "invalid",
+        "column_name": "voltage_v",
+        "n_rows": 22945,
+        "pct": 0.0503
+      },
+      {
+        "check_name": "missing",
+        "column_name": "current_a",
+        "n_rows": 34197,
+        "pct": 0.075
+      },
+      {
+        "check_name": "missing",
+        "column_name": "power_factor",
+        "n_rows": 34174,
+        "pct": 0.075
+      },
+      {
+        "check_name": "missing",
+        "column_name": "temperature_c",
+        "n_rows": 34198,
+        "pct": 0.075
+      },
+      {
+        "check_name": "missing",
+        "column_name": "voltage_v",
+        "n_rows": 34175,
+        "pct": 0.075
+      }
+    ],
+    "10GB": [
+      {
+        "check_name": "duplicate",
+        "column_name": "meter_id+timestamp",
+        "n_rows": 181997,
+        "pct": 0.1996
+      },
+      {
+        "check_name": "invalid",
+        "column_name": "energy_kwh",
+        "n_rows": 1,
+        "pct": 0.0
+      },
+      {
+        "check_name": "invalid",
+        "column_name": "power_factor",
+        "n_rows": 22793,
+        "pct": 0.025
+      },
+      {
+        "check_name": "invalid",
+        "column_name": "power_kw",
+        "n_rows": 22795,
+        "pct": 0.025
+      },
+      {
+        "check_name": "invalid",
+        "column_name": "voltage_v",
+        "n_rows": 45905,
+        "pct": 0.0503
+      },
+      {
+        "check_name": "missing",
+        "column_name": "current_a",
+        "n_rows": 68382,
+        "pct": 0.075
+      },
+      {
+        "check_name": "missing",
+        "column_name": "power_factor",
+        "n_rows": 68351,
+        "pct": 0.075
+      },
+      {
+        "check_name": "missing",
+        "column_name": "temperature_c",
+        "n_rows": 68390,
+        "pct": 0.075
+      },
+      {
+        "check_name": "missing",
+        "column_name": "voltage_v",
+        "n_rows": 68352,
+        "pct": 0.075
+      }
+    ],
+    "20GB": [
+      {
+        "check_name": "duplicate",
+        "column_name": "meter_id+timestamp",
+        "n_rows": 363995,
+        "pct": 0.1996
+      },
+      {
+        "check_name": "invalid",
+        "column_name": "energy_kwh",
+        "n_rows": 3,
+        "pct": 0.0
+      },
+      {
+        "check_name": "invalid",
+        "column_name": "power_factor",
+        "n_rows": 45586,
+        "pct": 0.025
+      },
+      {
+        "check_name": "invalid",
+        "column_name": "power_kw",
+        "n_rows": 45605,
+        "pct": 0.025
+      },
+      {
+        "check_name": "invalid",
+        "column_name": "voltage_v",
+        "n_rows": 91787,
+        "pct": 0.0503
+      },
+      {
+        "check_name": "missing",
+        "column_name": "current_a",
+        "n_rows": 136784,
+        "pct": 0.075
+      },
+      {
+        "check_name": "missing",
+        "column_name": "power_factor",
+        "n_rows": 136722,
+        "pct": 0.075
+      },
+      {
+        "check_name": "missing",
+        "column_name": "temperature_c",
+        "n_rows": 136771,
+        "pct": 0.075
+      },
+      {
+        "check_name": "missing",
+        "column_name": "voltage_v",
+        "n_rows": 136720,
+        "pct": 0.075
+      }
+    ]
+  },
+  "muni": [
+    {
+      "municipality": "Atauro",
+      "Energy Theft": 7906.0,
+      "Frequency Deviation": 19780.0,
+      "Meter Fault": 1108.0,
+      "Normal": 1277688.0,
+      "Over-Voltage": 3064.0,
+      "Overload": 20582.0,
+      "Voltage Sag": 22226.0,
+      "total": 1352354.0,
+      "pct_anom": 5.521
+    },
+    {
+      "municipality": "Oecusse",
+      "Energy Theft": 55539.0,
+      "Frequency Deviation": 120519.0,
+      "Meter Fault": 10993.0,
+      "Normal": 10350303.0,
+      "Over-Voltage": 35976.0,
+      "Overload": 156759.0,
+      "Voltage Sag": 211053.0,
+      "total": 10941142.0,
+      "pct_anom": 5.4
+    },
+    {
+      "municipality": "Bobonaro",
+      "Energy Theft": 72803.0,
+      "Frequency Deviation": 108268.0,
+      "Meter Fault": 13067.0,
+      "Normal": 13819834.0,
+      "Over-Voltage": 26208.0,
+      "Overload": 166004.0,
+      "Voltage Sag": 250993.0,
+      "total": 14457177.0,
+      "pct_anom": 4.408
+    },
+    {
+      "municipality": "Manatuto",
+      "Energy Theft": 39233.0,
+      "Frequency Deviation": 51564.0,
+      "Meter Fault": 4780.0,
+      "Normal": 6608747.0,
+      "Over-Voltage": 15644.0,
+      "Overload": 81969.0,
+      "Voltage Sag": 90744.0,
+      "total": 6892681.0,
+      "pct_anom": 4.119
+    },
+    {
+      "municipality": "Liquiçá",
+      "Energy Theft": 57801.0,
+      "Frequency Deviation": 84960.0,
+      "Meter Fault": 9231.0,
+      "Normal": 10878307.0,
+      "Over-Voltage": 15465.0,
+      "Overload": 150016.0,
+      "Voltage Sag": 146731.0,
+      "total": 11342511.0,
+      "pct_anom": 4.093
+    },
+    {
+      "municipality": "Cova Lima",
+      "Energy Theft": 56189.0,
+      "Frequency Deviation": 74901.0,
+      "Meter Fault": 8413.0,
+      "Normal": 9596191.0,
+      "Over-Voltage": 27235.0,
+      "Overload": 99845.0,
+      "Voltage Sag": 136104.0,
+      "total": 9998878.0,
+      "pct_anom": 4.027
+    },
+    {
+      "municipality": "Lautém",
+      "Energy Theft": 48972.0,
+      "Frequency Deviation": 70761.0,
+      "Meter Fault": 8125.0,
+      "Normal": 9082144.0,
+      "Over-Voltage": 10731.0,
+      "Overload": 85843.0,
+      "Voltage Sag": 151300.0,
+      "total": 9457876.0,
+      "pct_anom": 3.973
+    },
+    {
+      "municipality": "Manufahi",
+      "Energy Theft": 41516.0,
+      "Frequency Deviation": 61659.0,
+      "Meter Fault": 8053.0,
+      "Normal": 7911036.0,
+      "Over-Voltage": 25233.0,
+      "Overload": 72960.0,
+      "Voltage Sag": 115954.0,
+      "total": 8236411.0,
+      "pct_anom": 3.95
+    },
+    {
+      "municipality": "Aileu",
+      "Energy Theft": 36330.0,
+      "Frequency Deviation": 54654.0,
+      "Meter Fault": 6047.0,
+      "Normal": 7014071.0,
+      "Over-Voltage": 26790.0,
+      "Overload": 59640.0,
+      "Voltage Sag": 96014.0,
+      "total": 7293546.0,
+      "pct_anom": 3.832
+    },
+    {
+      "municipality": "Viqueque",
+      "Energy Theft": 45968.0,
+      "Frequency Deviation": 81049.0,
+      "Meter Fault": 10293.0,
+      "Normal": 10399766.0,
+      "Over-Voltage": 31914.0,
+      "Overload": 116094.0,
+      "Voltage Sag": 125162.0,
+      "total": 10810246.0,
+      "pct_anom": 3.797
+    },
+    {
+      "municipality": "Baucau",
+      "Energy Theft": 101802.0,
+      "Frequency Deviation": 135359.0,
+      "Meter Fault": 15160.0,
+      "Normal": 17418217.0,
+      "Over-Voltage": 30779.0,
+      "Overload": 172670.0,
+      "Voltage Sag": 221620.0,
+      "total": 18095607.0,
+      "pct_anom": 3.743
+    },
+    {
+      "municipality": "Ermera",
+      "Energy Theft": 99334.0,
+      "Frequency Deviation": 139514.0,
+      "Meter Fault": 17218.0,
+      "Normal": 17950864.0,
+      "Over-Voltage": 44364.0,
+      "Overload": 144245.0,
+      "Voltage Sag": 241014.0,
+      "total": 18636553.0,
+      "pct_anom": 3.679
+    },
+    {
+      "municipality": "Ainaro",
+      "Energy Theft": 44017.0,
+      "Frequency Deviation": 73881.0,
+      "Meter Fault": 7319.0,
+      "Normal": 9496520.0,
+      "Over-Voltage": 20146.0,
+      "Overload": 58368.0,
+      "Voltage Sag": 159018.0,
+      "total": 9859269.0,
+      "pct_anom": 3.679
+    },
+    {
+      "municipality": "Dili",
+      "Energy Theft": 222979.0,
+      "Frequency Deviation": 328614.0,
+      "Meter Fault": 38112.0,
+      "Normal": 42581467.0,
+      "Over-Voltage": 44815.0,
+      "Overload": 545057.0,
+      "Voltage Sag": 134414.0,
+      "total": 43895458.0,
+      "pct_anom": 2.993
+    }
+  ],
+  "hour_peak": {
+    "Energy Theft": 16,
+    "Frequency Deviation": 5,
+    "Meter Fault": 3,
+    "Over-Voltage": 4,
+    "Overload": 20,
+    "Voltage Sag": 21
+  },
+  "profile": [
+    {
+      "anomaly_type": "Overload",
+      "feature": "voltage_dev_pct",
+      "mean": -2.20318,
+      "p05": -5.686,
+      "p50": -1.982,
+      "p95": 0.45
+    },
+    {
+      "anomaly_type": "Overload",
+      "feature": "freq_dev_hz",
+      "mean": 0.00323025,
+      "p05": -0.16,
+      "p50": 0.0,
+      "p95": 0.16
+    },
+    {
+      "anomaly_type": "Overload",
+      "feature": "power_factor",
+      "mean": 0.914069,
+      "p05": 0.801,
+      "p50": 0.927,
+      "p95": 0.982
+    },
+    {
+      "anomaly_type": "Overload",
+      "feature": "load_ratio",
+      "mean": 1.1764,
+      "p05": 1.0068,
+      "p50": 1.1245,
+      "p95": 1.5155
+    },
+    {
+      "anomaly_type": "Overload",
+      "feature": "baseline_ratio",
+      "mean": 2.2105,
+      "p05": 1.0458,
+      "p50": 1.3881,
+      "p95": 7.0078
+    },
+    {
+      "anomaly_type": "Overload",
+      "feature": "consistency_ratio",
+      "mean": 1.00027,
+      "p05": 0.9717,
+      "p50": 1.0001,
+      "p95": 1.0293
+    },
+    {
+      "anomaly_type": "Overload",
+      "feature": "temperature_c",
+      "mean": 26.4813,
+      "p05": 21.2,
+      "p50": 26.6,
+      "p95": 31.3
+    },
+    {
+      "anomaly_type": "Overload",
+      "feature": "current_a",
+      "mean": 18.4494,
+      "p05": 6.44,
+      "p50": 13.27,
+      "p95": 49.3
+    },
+    {
+      "anomaly_type": "Overload",
+      "feature": "power_kw",
+      "mean": 7.33119,
+      "p05": 1.29,
+      "p50": 3.891,
+      "p95": 26.514
+    },
+    {
+      "anomaly_type": "Over-Voltage",
+      "feature": "voltage_dev_pct",
+      "mean": 13.3736,
+      "p05": 10.005,
+      "p50": 13.323,
+      "p95": 16.764
+    },
+    {
+      "anomaly_type": "Over-Voltage",
+      "feature": "freq_dev_hz",
+      "mean": 0.0119873,
+      "p05": -0.15,
+      "p50": 0.01,
+      "p95": 0.18
+    },
+    {
+      "anomaly_type": "Over-Voltage",
+      "feature": "power_factor",
+      "mean": 0.924413,
+      "p05": 0.817,
+      "p50": 0.935,
+      "p95": 0.984
+    },
+    {
+      "anomaly_type": "Over-Voltage",
+      "feature": "load_ratio",
+      "mean": 0.165847,
+      "p05": 0.0658,
+      "p50": 0.1522,
+      "p95": 0.3004
+    },
+    {
+      "anomaly_type": "Over-Voltage",
+      "feature": "baseline_ratio",
+      "mean": 1.03819,
+      "p05": 0.6806,
+      "p50": 0.9994,
+      "p95": 1.4318
+    },
+    {
+      "anomaly_type": "Over-Voltage",
+      "feature": "consistency_ratio",
+      "mean": 1.00025,
+      "p05": 0.9714,
+      "p50": 1.0001,
+      "p95": 1.0293
+    },
+    {
+      "anomaly_type": "Over-Voltage",
+      "feature": "temperature_c",
+      "mean": 22.7302,
+      "p05": 18.9,
+      "p50": 23.0,
+      "p95": 26.1
+    },
+    {
+      "anomaly_type": "Over-Voltage",
+      "feature": "current_a",
+      "mean": 1.99736,
+      "p05": 0.54,
+      "p50": 1.4,
+      "p95": 4.45
+    },
+    {
+      "anomaly_type": "Over-Voltage",
+      "feature": "power_kw",
+      "mean": 0.70802,
+      "p05": 0.143,
+      "p50": 0.396,
+      "p95": 1.498
+    },
+    {
+      "anomaly_type": "Energy Theft",
+      "feature": "voltage_dev_pct",
+      "mean": -0.564269,
+      "p05": -3.968,
+      "p50": -0.291,
+      "p95": 2.032
+    },
+    {
+      "anomaly_type": "Energy Theft",
+      "feature": "freq_dev_hz",
+      "mean": -0.00594652,
+      "p05": -0.17,
+      "p50": 0.0,
+      "p95": 0.16
+    },
+    {
+      "anomaly_type": "Energy Theft",
+      "feature": "power_factor",
+      "mean": 0.923471,
+      "p05": 0.821,
+      "p50": 0.934,
+      "p95": 0.983
+    },
+    {
+      "anomaly_type": "Energy Theft",
+      "feature": "load_ratio",
+      "mean": 0.0966251,
+      "p05": 0.014,
+      "p50": 0.0725,
+      "p95": 0.2629
+    },
+    {
+      "anomaly_type": "Energy Theft",
+      "feature": "baseline_ratio",
+      "mean": 0.302689,
+      "p05": 0.0704,
+      "p50": 0.2859,
+      "p95": 0.581
+    },
+    {
+      "anomaly_type": "Energy Theft",
+      "feature": "consistency_ratio",
+      "mean": 1.00037,
+      "p05": 0.968,
+      "p50": 1.0001,
+      "p95": 1.0331
+    },
+    {
+      "anomaly_type": "Energy Theft",
+      "feature": "temperature_c",
+      "mean": 25.1564,
+      "p05": 19.6,
+      "p50": 25.2,
+      "p95": 30.6
+    },
+    {
+      "anomaly_type": "Energy Theft",
+      "feature": "current_a",
+      "mean": 1.35428,
+      "p05": 0.14,
+      "p50": 0.77,
+      "p95": 4.03
+    },
+    {
+      "anomaly_type": "Energy Theft",
+      "feature": "power_kw",
+      "mean": 0.450515,
+      "p05": 0.033,
+      "p50": 0.183,
+      "p95": 1.498
+    },
+    {
+      "anomaly_type": "Frequency Deviation",
+      "feature": "voltage_dev_pct",
+      "mean": -0.51228,
+      "p05": -3.627,
+      "p50": -0.318,
+      "p95": 2.073
+    },
+    {
+      "anomaly_type": "Frequency Deviation",
+      "feature": "freq_dev_hz",
+      "mean": -0.58424,
+      "p05": -1.38,
+      "p50": -0.78,
+      "p95": 0.74
+    },
+    {
+      "anomaly_type": "Frequency Deviation",
+      "feature": "power_factor",
+      "mean": 0.924591,
+      "p05": 0.818,
+      "p50": 0.935,
+      "p95": 0.984
+    },
+    {
+      "anomaly_type": "Frequency Deviation",
+      "feature": "load_ratio",
+      "mean": 0.315459,
+      "p05": 0.0969,
+      "p50": 0.2615,
+      "p95": 0.725
+    },
+    {
+      "anomaly_type": "Frequency Deviation",
+      "feature": "baseline_ratio",
+      "mean": 1.02278,
+      "p05": 0.6873,
+      "p50": 0.9929,
+      "p95": 1.4017
+    },
+    {
+      "anomaly_type": "Frequency Deviation",
+      "feature": "consistency_ratio",
+      "mean": 1.00026,
+      "p05": 0.9716,
+      "p50": 1.0001,
+      "p95": 1.0292
+    },
+    {
+      "anomaly_type": "Frequency Deviation",
+      "feature": "temperature_c",
+      "mean": 25.061,
+      "p05": 19.2,
+      "p50": 25.1,
+      "p95": 30.5
+    },
+    {
+      "anomaly_type": "Frequency Deviation",
+      "feature": "current_a",
+      "mean": 4.24917,
+      "p05": 0.89,
+      "p50": 2.83,
+      "p95": 11.81
+    },
+    {
+      "anomaly_type": "Frequency Deviation",
+      "feature": "power_kw",
+      "mean": 1.38412,
+      "p05": 0.203,
+      "p50": 0.668,
+      "p95": 4.836
+    },
+    {
+      "anomaly_type": "Meter Fault",
+      "feature": "voltage_dev_pct",
+      "mean": -0.560573,
+      "p05": -3.918,
+      "p50": -0.291,
+      "p95": 2.009
+    },
+    {
+      "anomaly_type": "Meter Fault",
+      "feature": "freq_dev_hz",
+      "mean": -0.0050783,
+      "p05": -0.17,
+      "p50": 0.0,
+      "p95": 0.16
+    },
+    {
+      "anomaly_type": "Meter Fault",
+      "feature": "power_factor",
+      "mean": 0.926321,
+      "p05": 0.822,
+      "p50": 0.936,
+      "p95": 0.985
+    },
+    {
+      "anomaly_type": "Meter Fault",
+      "feature": "load_ratio",
+      "mean": 0.323038,
+      "p05": 0.0914,
+      "p50": 0.2654,
+      "p95": 0.7424
+    },
+    {
+      "anomaly_type": "Meter Fault",
+      "feature": "baseline_ratio",
+      "mean": 1.02422,
+      "p05": 0.6788,
+      "p50": 0.9971,
+      "p95": 1.415
+    },
+    {
+      "anomaly_type": "Meter Fault",
+      "feature": "consistency_ratio",
+      "mean": 1.98398,
+      "p05": 0.3451,
+      "p50": 2.0175,
+      "p95": 5.5942
+    },
+    {
+      "anomaly_type": "Meter Fault",
+      "feature": "temperature_c",
+      "mean": 25.1955,
+      "p05": 19.6,
+      "p50": 25.2,
+      "p95": 30.6
+    },
+    {
+      "anomaly_type": "Meter Fault",
+      "feature": "current_a",
+      "mean": 5.78345,
+      "p05": 0.29,
+      "p50": 2.6,
+      "p95": 21.15
+    },
+    {
+      "anomaly_type": "Meter Fault",
+      "feature": "power_kw",
+      "mean": 1.37848,
+      "p05": 0.198,
+      "p50": 0.677,
+      "p95": 5.06
+    },
+    {
+      "anomaly_type": "Normal",
+      "feature": "voltage_dev_pct",
+      "mean": -0.443081,
+      "p05": -3.618,
+      "p50": -0.259,
+      "p95": 2.014
+    },
+    {
+      "anomaly_type": "Normal",
+      "feature": "freq_dev_hz",
+      "mean": -8.37537e-05,
+      "p05": -0.16,
+      "p50": 0.0,
+      "p95": 0.16
+    },
+    {
+      "anomaly_type": "Normal",
+      "feature": "power_factor",
+      "mean": 0.924695,
+      "p05": 0.819,
+      "p50": 0.936,
+      "p95": 0.985
+    },
+    {
+      "anomaly_type": "Normal",
+      "feature": "load_ratio",
+      "mean": 0.312618,
+      "p05": 0.0933,
+      "p50": 0.2629,
+      "p95": 0.7041
+    },
+    {
+      "anomaly_type": "Normal",
+      "feature": "baseline_ratio",
+      "mean": 1.01372,
+      "p05": 0.678,
+      "p50": 0.9937,
+      "p95": 1.4087
+    },
+    {
+      "anomaly_type": "Normal",
+      "feature": "consistency_ratio",
+      "mean": 1.00026,
+      "p05": 0.9717,
+      "p50": 1.0001,
+      "p95": 1.0294
+    },
+    {
+      "anomaly_type": "Normal",
+      "feature": "temperature_c",
+      "mean": 25.1742,
+      "p05": 19.6,
+      "p50": 25.3,
+      "p95": 30.6
+    },
+    {
+      "anomaly_type": "Normal",
+      "feature": "current_a",
+      "mean": 4.19031,
+      "p05": 0.86,
+      "p50": 2.85,
+      "p95": 11.61
+    },
+    {
+      "anomaly_type": "Normal",
+      "feature": "power_kw",
+      "mean": 1.36252,
+      "p05": 0.198,
+      "p50": 0.666,
+      "p95": 4.857
+    },
+    {
+      "anomaly_type": "Voltage Sag",
+      "feature": "voltage_dev_pct",
+      "mean": -12.6932,
+      "p05": -18.964,
+      "p50": -12.659,
+      "p95": -6.541
+    },
+    {
+      "anomaly_type": "Voltage Sag",
+      "feature": "freq_dev_hz",
+      "mean": -0.00139238,
+      "p05": -0.16,
+      "p50": 0.0,
+      "p95": 0.17
+    },
+    {
+      "anomaly_type": "Voltage Sag",
+      "feature": "power_factor",
+      "mean": 0.924535,
+      "p05": 0.819,
+      "p50": 0.935,
+      "p95": 0.984
+    },
+    {
+      "anomaly_type": "Voltage Sag",
+      "feature": "load_ratio",
+      "mean": 0.406543,
+      "p05": 0.0968,
+      "p50": 0.3712,
+      "p95": 0.8375
+    },
+    {
+      "anomaly_type": "Voltage Sag",
+      "feature": "baseline_ratio",
+      "mean": 1.02336,
+      "p05": 0.6789,
+      "p50": 0.9946,
+      "p95": 1.4191
+    },
+    {
+      "anomaly_type": "Voltage Sag",
+      "feature": "consistency_ratio",
+      "mean": 1.00029,
+      "p05": 0.9713,
+      "p50": 1.0001,
+      "p95": 1.0297
+    },
+    {
+      "anomaly_type": "Voltage Sag",
+      "feature": "temperature_c",
+      "mean": 24.3311,
+      "p05": 19.5,
+      "p50": 24.4,
+      "p95": 29.1
+    },
+    {
+      "anomaly_type": "Voltage Sag",
+      "feature": "current_a",
+      "mean": 5.97257,
+      "p05": 1.1,
+      "p50": 4.38,
+      "p95": 15.91
+    },
+    {
+      "anomaly_type": "Voltage Sag",
+      "feature": "power_kw",
+      "mean": 1.51804,
+      "p05": 0.243,
+      "p50": 0.926,
+      "p95": 4.309
+    }
+  ],
+  "top_meters": [
+    {
+      "meter_id": "TL-OEC-018533",
+      "municipality": "Oecusse",
+      "customer_type": "industrial",
+      "anomaly_type": "Overload",
+      "n_hours": 2057,
+      "lost_kwh_est": 0.0
+    },
+    {
+      "meter_id": "TL-DIL-009395",
+      "municipality": "Dili",
+      "customer_type": "residential",
+      "anomaly_type": "Energy Theft",
+      "n_hours": 1927,
+      "lost_kwh_est": 816.46
+    },
+    {
+      "meter_id": "TL-DIL-011604",
+      "municipality": "Dili",
+      "customer_type": "commercial",
+      "anomaly_type": "Overload",
+      "n_hours": 1923,
+      "lost_kwh_est": 0.0
+    },
+    {
+      "meter_id": "TL-DIL-007416",
+      "municipality": "Dili",
+      "customer_type": "residential",
+      "anomaly_type": "Energy Theft",
+      "n_hours": 1908,
+      "lost_kwh_est": 1022.75
+    },
+    {
+      "meter_id": "TL-VIQ-019988",
+      "municipality": "Viqueque",
+      "customer_type": "residential",
+      "anomaly_type": "Energy Theft",
+      "n_hours": 1902,
+      "lost_kwh_est": 741.85
+    },
+    {
+      "meter_id": "TL-COV-006066",
+      "municipality": "Cova Lima",
+      "customer_type": "residential",
+      "anomaly_type": "Energy Theft",
+      "n_hours": 1898,
+      "lost_kwh_est": 703.89
+    },
+    {
+      "meter_id": "TL-AIN-000848",
+      "municipality": "Ainaro",
+      "customer_type": "residential",
+      "anomaly_type": "Energy Theft",
+      "n_hours": 1895,
+      "lost_kwh_est": 841.98
+    },
+    {
+      "meter_id": "TL-BOB-004722",
+      "municipality": "Bobonaro",
+      "customer_type": "residential",
+      "anomaly_type": "Energy Theft",
+      "n_hours": 1865,
+      "lost_kwh_est": 604.95
+    }
+  ],
+  "models": [
+    {
+      "id": 12,
+      "created_at": "2026-11-07 15:18:53",
+      "task": "supervised",
+      "algorithm": "random_forest",
+      "engine": "spark-mllib",
+      "dataset": "20GB",
+      "params": {
+        "numTrees": 60,
+        "maxDepth": 16,
+        "maxBins": 64,
+        "normal_rows": 1700000,
+        "cap_per_type": 100000,
+        "featureSubsetStrategy": "sqrt"
+      },
+      "n_train": 2298650,
+      "n_test": 36958516,
+      "accuracy": 0.988332,
+      "precision_macro": 0.741511,
+      "recall_macro": 0.962027,
+      "f1_macro": 0.814698,
+      "anomaly_precision": 0.785471,
+      "anomaly_recall": 0.967661,
+      "anomaly_f1": 0.867099,
+      "roc_auc": null,
+      "pr_auc": null,
+      "false_positive_rate": 0.0107225,
+      "train_seconds": 402.42,
+      "feature_importance": {
+        "voltage_v": 18.279,
+        "load_ratio": 16.16,
+        "voltage_dev_pct": 14.91,
+        "consistency_ratio": 11.836,
+        "baseline_ratio": 11.742,
+        "freq_dev_hz": 9.289,
+        "frequency_hz": 8.031,
+        "current_a": 4.185,
+        "power_kw": 2.258,
+        "hour": 1.264,
+        "municipality": 0.621,
+        "contracted_kva": 0.605,
+        "temperature_c": 0.377,
+        "customer_type": 0.297,
+        "is_weekend": 0.076,
+        "power_factor": 0.071
+      },
+      "confusion_matrix": {
+        "labels": [
+          "Normal",
+          "Voltage Sag",
+          "Over-Voltage",
+          "Frequency Deviation",
+          "Overload",
+          "Energy Theft",
+          "Meter Fault"
+        ],
+        "matrix": [
+          [
+            35136683,
+            39042,
+            67857,
+            7186,
+            31884,
+            173600,
+            61269
+          ],
+          [
+            11700,
+            414265,
+            56,
+            0,
+            639,
+            209,
+            130
+          ],
+          [
+            36,
+            0,
+            73015,
+            0,
+            0,
+            21,
+            0
+          ],
+          [
+            7993,
+            14,
+            40,
+            278287,
+            133,
+            197,
+            57
+          ],
+          [
+            2788,
+            32,
+            8,
+            0,
+            400984,
+            0,
+            236
+          ],
+          [
+            21697,
+            885,
+            246,
+            506,
+            1,
+            192055,
+            34
+          ],
+          [
+            2387,
+            138,
+            39,
+            68,
+            78,
+            34,
+            31987
+          ]
+        ],
+        "binary": {
+          "tn": 35136683,
+          "fp": 380838,
+          "fn": 46601,
+          "tp": 1394394
+        }
+      },
+      "class_report": {
+        "per_class": {
+          "Normal": {
+            "precision": 0.998675478957564,
+            "recall": 0.9892774611155998,
+            "f1": 0.9939542555420692,
+            "support": 35517521
+          },
+          "Voltage Sag": {
+            "precision": 0.9117228902935014,
+            "recall": 0.9701779161075319,
+            "f1": 0.9400425471564317,
+            "support": 426999
+          },
+          "Over-Voltage": {
+            "precision": 0.5168801013726365,
+            "recall": 0.9992199474490913,
+            "f1": 0.6813229880606346,
+            "support": 73072
+          },
+          "Frequency Deviation": {
+            "precision": 0.972871591032243,
+            "recall": 0.9705846450033307,
+            "f1": 0.9717267724453881,
+            "support": 286721
+          },
+          "Overload": {
+            "precision": 0.9245248651776842,
+            "recall": 0.9924167425652398,
+            "f1": 0.9572685484150127,
+            "support": 404048
+          },
+          "Energy Theft": {
+            "precision": 0.524574178675611,
+            "recall": 0.8915209076054664,
+            "f1": 0.6605048663892424,
+            "support": 215424
+          },
+          "Meter Fault": {
+            "precision": 0.3413293779945152,
+            "recall": 0.9209927730269788,
+            "f1": 0.4980691974712716,
+            "support": 34731
+          }
+        },
+        "cores": 16,
+        "natural_anomaly_rate": 0.0389895254452316
+      },
+      "file_path": null,
+      "is_active": 0,
+      "notes": "Spark MLlib distributed training on 2,298,650 rows; tested on ALL 36,958,516 readings of held-out meters"
+    },
+    {
+      "id": 13,
+      "created_at": "2026-11-07 15:20:58",
+      "task": "supervised",
+      "algorithm": "random_forest",
+      "engine": "scikit-learn",
+      "dataset": "20GB",
+      "params": {
+        "n_estimators": 150,
+        "max_depth": 24,
+        "min_samples_leaf": 2,
+        "max_features": "sqrt",
+        "normal_weight": 4.0
+      },
+      "n_train": 1079003,
+      "n_test": 999536,
+      "accuracy": 0.996313,
+      "precision_macro": 0.954347,
+      "recall_macro": 0.971401,
+      "f1_macro": 0.962575,
+      "anomaly_precision": 0.94161,
+      "anomaly_recall": 0.967677,
+      "anomaly_f1": 0.954465,
+      "roc_auc": 0.998795,
+      "pr_auc": 0.989885,
+      "false_positive_rate": 0.0024513,
+      "train_seconds": 49.55,
+      "feature_importance": {
+        "voltage_dev_pct": 16.907,
+        "voltage_v": 16.158,
+        "load_ratio": 15.054,
+        "consistency_ratio": 15.012,
+        "baseline_ratio": 11.469,
+        "frequency_hz": 8.81,
+        "freq_dev_hz": 8.352,
+        "current_a": 3.184,
+        "power_kw": 2.378,
+        "contracted_kva": 0.828,
+        "hour": 0.785,
+        "customer_type": 0.349,
+        "municipality": 0.25,
+        "temperature_c": 0.24,
+        "power_factor": 0.169,
+        "is_weekend": 0.057
+      },
+      "confusion_matrix": {
+        "labels": [
+          "Normal",
+          "Voltage Sag",
+          "Over-Voltage",
+          "Frequency Deviation",
+          "Overload",
+          "Energy Theft",
+          "Meter Fault"
+        ],
+        "matrix": [
+          [
+            957953,
+            254,
+            0,
+            0,
+            579,
+            1521,
+            0
+          ],
+          [
+            214,
+            11302,
+            0,
+            0,
+            8,
+            11,
+            0
+          ],
+          [
+            0,
+            0,
+            1966,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            7801,
+            0,
+            6,
+            0
+          ],
+          [
+            111,
+            5,
+            0,
+            0,
+            10985,
+            0,
+            0
+          ],
+          [
+            943,
+            13,
+            6,
+            14,
+            0,
+            4892,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            952
+          ]
+        ],
+        "binary": {
+          "tn": 957953,
+          "fp": 2354,
+          "fn": 1268,
+          "tp": 37961
+        }
+      },
+      "class_report": {
+        "per_class": {
+          "Normal": {
+            "precision": 0.998678093995023,
+            "recall": 0.9975487005717963,
+            "f1": 0.9981130777982921,
+            "support": 960307
+          },
+          "Voltage Sag": {
+            "precision": 0.9764990495939174,
+            "recall": 0.9798006068487213,
+            "f1": 0.9781470422779004,
+            "support": 11535
+          },
+          "Over-Voltage": {
+            "precision": 0.9969574036511156,
+            "recall": 1.0,
+            "f1": 0.9984763839512443,
+            "support": 1966
+          },
+          "Frequency Deviation": {
+            "precision": 0.9982085732565579,
+            "recall": 0.9992314589470987,
+            "f1": 0.998719754192805,
+            "support": 7807
+          },
+          "Overload": {
+            "precision": 0.9492741099204978,
+            "recall": 0.9895504909467615,
+            "f1": 0.9689939575706787,
+            "support": 11101
+          },
+          "Energy Theft": {
+            "precision": 0.7608087091757387,
+            "recall": 0.8336741649625086,
+            "f1": 0.7955765165067491,
+            "support": 5868
+          },
+          "Meter Fault": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 952
+          }
+        },
+        "text": "                     precision    recall  f1-score   support\n\n             Normal     0.9987    0.9975    0.9981    960307\n        Voltage Sag     0.9765    0.9798    0.9781     11535\n       Over-Voltage     0.9970    1.0000    0.9985      1966\nFrequency Deviation     0.9982    0.9992    0.9987      7807\n           Overload     0.9493    0.9896    0.9690     11101\n       Energy Theft     0.7608    0.8337    0.7956      5868\n        Meter Fault     1.0000    1.0000    1.0000       952\n\n           accuracy                         0.9963    999536\n          macro avg     0.9543    0.9714    0.9626    999536\n       weighted avg     0.9965    0.9963    0.9964    999536\n",
+        "natural_anomaly_rate": 0.03924721070576748,
+        "model_size_mb": 30.63,
+        "thresholds": [
+          {
+            "threshold": 0.2,
+            "precision": 0.8200850159404889,
+            "recall": 0.9835835733768385,
+            "f1": 0.8944239038468225,
+            "flagged": 47050
+          },
+          {
+            "threshold": 0.3,
+            "precision": 0.8867061107515947,
+            "recall": 0.9780009686711362,
+            "f1": 0.9301186709819751,
+            "flagged": 43268
+          },
+          {
+            "threshold": 0.4,
+            "precision": 0.9213138509841806,
+            "recall": 0.9724183639654337,
+            "f1": 0.9461765508346355,
+            "flagged": 41405
+          },
+          {
+            "threshold": 0.5,
+            "precision": 0.9408820614469772,
+            "recall": 0.9680083611613857,
+            "f1": 0.9542524720752867,
+            "flagged": 40360
+          },
+          {
+            "threshold": 0.6,
+            "precision": 0.9538399414481488,
+            "recall": 0.9634199189375207,
+            "f1": 0.9586059960432202,
+            "flagged": 39623
+          },
+          {
+            "threshold": 0.7,
+            "precision": 0.9665672255940747,
+            "recall": 0.9580667363430115,
+            "f1": 0.9622982090049031,
+            "flagged": 38884
+          },
+          {
+            "threshold": 0.8,
+            "precision": 0.9801565341133687,
+            "recall": 0.9481251115246374,
+            "f1": 0.9638747797242666,
+            "flagged": 37947
+          },
+          {
+            "threshold": 0.9,
+            "precision": 0.9914790515340429,
+            "recall": 0.9283948099620178,
+            "f1": 0.9589005028830204,
+            "flagged": 36733
+          }
+        ],
+        "inference_ms_per_1000": 2.27,
+        "cv": {
+          "folds": 3,
+          "rows": 120000,
+          "macro_f1_mean": 0.9788042103838482,
+          "macro_f1_std": 0.0009005286277305466,
+          "anomaly_f1_mean": 0.9813437343633659,
+          "anomaly_f1_std": 0.0006390780971721483,
+          "split": "StratifiedGroupKFold (groups = meter_id)"
+        }
+      },
+      "file_path": "models\\anomaly_random_forest_20261107_152057.joblib",
+      "is_active": 1,
+      "notes": "Random Forest - train: Spark sample of 20GB (train meters), test: held-out meters, natural distribution"
+    }
+  ],
+  "compare": {
+    "dataset": "20GB",
+    "n_train": 1079003,
+    "n_test": 999536,
+    "natural_rate": 0.03924721070576748,
+    "models": {
+      "Random Forest #1 (1GB)": {
+        "precision": 0.8973075106282475,
+        "recall": 0.9684672053837722,
+        "f1": 0.9315303607988329,
+        "pr_auc": 0.9857995533625281
+      },
+      "Random Forest #10 (5GB)": {
+        "precision": 0.8543393710412268,
+        "recall": 0.9799128195977466,
+        "f1": 0.9128276975683891,
+        "pr_auc": 0.9888040079689548
+      },
+      "Random Forest #11 (20GB)": {
+        "precision": 0.8502187071974551,
+        "recall": 0.9810599301537128,
+        "f1": 0.9109651458666194,
+        "pr_auc": 0.9896210194299767
+      },
+      "Random Forest #13 (20GB)": {
+        "precision": 0.9416098226466576,
+        "recall": 0.9676769736674399,
+        "f1": 0.9544654530825707,
+        "pr_auc": 0.989884934492156
+      },
+      "Decision Tree": {
+        "precision": 0.8805977032698428,
+        "recall": 0.9734635091386474,
+        "f1": 0.9247048852836128,
+        "pr_auc": 0.8803634280355085,
+        "train_seconds": 25.2
+      },
+      "Logistic Regression": {
+        "precision": 0.9034039353952247,
+        "recall": 0.8882969231945754,
+        "f1": 0.8957867407007531,
+        "pr_auc": 0.9338085104558482,
+        "train_seconds": 26.2
+      },
+      "Isolation Forest": {
+        "precision": 0.264943896633798,
+        "recall": 0.09931428280098907,
+        "f1": 0.14447287425371752,
+        "pr_auc": 0.25087487143380793,
+        "train_seconds": 20.4
+      }
+    }
+  },
+  "benchmarks": [
+    {
+      "vol": "100k",
+      "engine": "pandas",
+      "avg_s": 0.8656666477521261,
+      "min_s": 0.756,
+      "max_s": 0.978,
+      "mem_mb": 108.83333333333333,
+      "n_rows": 99600,
+      "size_mb": 11.21,
+      "runs": 3,
+      "failed": 0,
+      "result_check": "rows=99600 kwh=139712.2"
+    },
+    {
+      "vol": "100k",
+      "engine": "spark",
+      "avg_s": 11.39033317565918,
+      "min_s": 10.919,
+      "max_s": 11.743,
+      "mem_mb": 1702.2999674479167,
+      "n_rows": 99600,
+      "size_mb": 11.21,
+      "runs": 3,
+      "failed": 0,
+      "result_check": "rows=99600 kwh=139712.2"
+    },
+    {
+      "vol": "10GB",
+      "engine": "pandas",
+      "avg_s": 94.78800201416016,
+      "min_s": 94.788,
+      "max_s": 94.788,
+      "mem_mb": 21134.69921875,
+      "n_rows": null,
+      "size_mb": 10445.1,
+      "runs": 1,
+      "failed": 1,
+      "result_check": "FAILED: out of memory (peak 20.6 GB, RAM 32 GB)"
+    },
+    {
+      "vol": "10GB",
+      "engine": "spark",
+      "avg_s": 81.15866343180339,
+      "min_s": 77.687,
+      "max_s": 86.047,
+      "mem_mb": 13209.666666666666,
+      "n_rows": 90634832,
+      "size_mb": 10445.1,
+      "runs": 3,
+      "failed": 0,
+      "result_check": "rows=90634832 kwh=128363351.1"
+    },
+    {
+      "vol": "10k",
+      "engine": "pandas",
+      "avg_s": 0.7200000087420145,
+      "min_s": 0.647,
+      "max_s": 0.865,
+      "mem_mb": 78.33333333333333,
+      "n_rows": 9958,
+      "size_mb": 1.12,
+      "runs": 3,
+      "failed": 0,
+      "result_check": "rows=9958 kwh=13965.0"
+    },
+    {
+      "vol": "10k",
+      "engine": "spark",
+      "avg_s": 11.689000129699707,
+      "min_s": 11.522,
+      "max_s": 11.96,
+      "mem_mb": 1714.0,
+      "n_rows": 9958,
+      "size_mb": 1.12,
+      "runs": 3,
+      "failed": 0,
+      "result_check": "rows=9958 kwh=13965.0"
+    },
+    {
+      "vol": "1M",
+      "engine": "pandas",
+      "avg_s": 2.043333371480306,
+      "min_s": 2.042,
+      "max_s": 2.045,
+      "mem_mb": 550.3333129882812,
+      "n_rows": 994189,
+      "size_mb": 112.26,
+      "runs": 3,
+      "failed": 0,
+      "result_check": "rows=994189 kwh=1433231.4"
+    },
+    {
+      "vol": "1M",
+      "engine": "spark",
+      "avg_s": 15.175999959309896,
+      "min_s": 14.855,
+      "max_s": 15.744,
+      "mem_mb": 2860.2333170572915,
+      "n_rows": 994189,
+      "size_mb": 112.26,
+      "runs": 3,
+      "failed": 0,
+      "result_check": "rows=994189 kwh=1433231.4"
+    },
+    {
+      "vol": "20GB",
+      "engine": "pandas",
+      "avg_s": 139.98599243164062,
+      "min_s": 139.986,
+      "max_s": 139.986,
+      "mem_mb": 21904.400390625,
+      "n_rows": null,
+      "size_mb": 20981.2,
+      "runs": 1,
+      "failed": 1,
+      "result_check": "FAILED: out of memory (peak 21.4 GB, RAM 32 GB)"
+    },
+    {
+      "vol": "20GB",
+      "engine": "spark",
+      "avg_s": 189.38433329264322,
+      "min_s": 189.194,
+      "max_s": 189.659,
+      "mem_mb": 13261.866861979166,
+      "n_rows": 181269712,
+      "size_mb": 20981.2,
+      "runs": 3,
+      "failed": 0,
+      "result_check": "rows=181269712 kwh=257781398.2"
+    },
+    {
+      "vol": "500k",
+      "engine": "pandas",
+      "avg_s": 1.2889999548594158,
+      "min_s": 1.287,
+      "max_s": 1.29,
+      "mem_mb": 250.36666361490884,
+      "n_rows": 497994,
+      "size_mb": 56.06,
+      "runs": 3,
+      "failed": 0,
+      "result_check": "rows=497994 kwh=685867.8"
+    },
+    {
+      "vol": "500k",
+      "engine": "spark",
+      "avg_s": 13.952666600545248,
+      "min_s": 13.872,
+      "max_s": 14.025,
+      "mem_mb": 2467.7000325520835,
+      "n_rows": 497994,
+      "size_mb": 56.06,
+      "runs": 3,
+      "failed": 0,
+      "result_check": "rows=497994 kwh=685867.8"
+    },
+    {
+      "vol": "50k",
+      "engine": "pandas",
+      "avg_s": 0.7933333317438761,
+      "min_s": 0.754,
+      "max_s": 0.871,
+      "mem_mb": 93.53333536783855,
+      "n_rows": 49808,
+      "size_mb": 5.6,
+      "runs": 3,
+      "failed": 0,
+      "result_check": "rows=49808 kwh=70252.1"
+    },
+    {
+      "vol": "50k",
+      "engine": "spark",
+      "avg_s": 11.864333152770996,
+      "min_s": 11.484,
+      "max_s": 12.473,
+      "mem_mb": 1530.3333333333333,
+      "n_rows": 49808,
+      "size_mb": 5.6,
+      "runs": 3,
+      "failed": 0,
+      "result_check": "rows=49808 kwh=70252.1"
+    },
+    {
+      "vol": "5GB",
+      "engine": "pandas",
+      "avg_s": 59.26300048828125,
+      "min_s": 59.263,
+      "max_s": 59.263,
+      "mem_mb": 20754.400390625,
+      "n_rows": null,
+      "size_mb": 5216.98,
+      "runs": 1,
+      "failed": 1,
+      "result_check": "FAILED: out of memory (peak 20.3 GB, RAM 32 GB)"
+    },
+    {
+      "vol": "5GB",
+      "engine": "spark",
+      "avg_s": 50.46266555786133,
+      "min_s": 48.947,
+      "max_s": 51.446,
+      "mem_mb": 13140.7666015625,
+      "n_rows": 45317416,
+      "size_mb": 5216.98,
+      "runs": 3,
+      "failed": 0,
+      "result_check": "rows=45317416 kwh=65245974.0"
+    }
+  ],
+  "stream": {
+    "batches": 9787,
+    "msgs": "3150953",
+    "invalid": "15735",
+    "anomalies": "312897",
+    "proc_ms": 1054.5592521245746,
+    "lat_ms": 2814.2759835397283,
+    "max_lat_ms": 10699600.0,
+    "per_batch": "321.9529",
+    "first": "2026-11-07 09:29:10",
+    "last": "2026-11-08 04:39:02"
+  },
+  "live": {
+    "n": 3135118,
+    "meters": 281,
+    "true_rate": 0.1042056471239679,
+    "accuracy": 0.9911378136325332,
+    "rf": {
+      "precision": 0.9828129045456143,
+      "recall": 0.9411595453891526,
+      "f1": 0.9615353343298705
+    },
+    "roc_auc": 0.9972656113423,
+    "pr_auc": 0.989886635728214,
+    "per_type_recall": {
+      "Voltage Sag": {
+        "rf": 0.9745559180714156,
+        "n": 44136
+      },
+      "Over-Voltage": {
+        "rf": 0.9984406692225622,
+        "n": 85293
+      },
+      "Frequency Deviation": {
+        "rf": 0.9987590486039297,
+        "n": 14505
+      },
+      "Overload": {
+        "rf": 0.9927158836689038,
+        "n": 55875
+      },
+      "Energy Theft": {
+        "rf": 0.8080787195849741,
+        "n": 106403
+      },
+      "Meter Fault": {
+        "rf": 0.9851110568708812,
+        "n": 20485
+      }
+    },
+    "confusion": [
+      [
+        2803044,
+        3252,
+        2,
+        0,
+        2123,
+        0,
+        0
+      ],
+      [
+        1106,
+        43013,
+        0,
+        0,
+        17,
+        0,
+        0
+      ],
+      [
+        133,
+        0,
+        85160,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        15,
+        0,
+        0,
+        14487,
+        3,
+        0,
+        0
+      ],
+      [
+        370,
+        37,
+        0,
+        0,
+        55468,
+        0,
+        0
+      ],
+      [
+        17598,
+        587,
+        2137,
+        99,
+        0,
+        85982,
+        0
+      ],
+      [
+        1,
+        3,
+        301,
+        0,
+        0,
+        0,
+        20180
+      ]
+    ]
+  },
+  "events": [
+    {
+      "anomaly_type": "Energy Theft",
+      "n": 1479,
+      "correct": "1479"
+    },
+    {
+      "anomaly_type": "Frequency Deviation",
+      "n": 1437,
+      "correct": "1424"
+    },
+    {
+      "anomaly_type": "Meter Fault",
+      "n": 325,
+      "correct": "325"
+    },
+    {
+      "anomaly_type": "Over-Voltage",
+      "n": 1417,
+      "correct": "1382"
+    },
+    {
+      "anomaly_type": "Overload",
+      "n": 3956,
+      "correct": "3692"
+    },
+    {
+      "anomaly_type": "Voltage Sag",
+      "n": 2341,
+      "correct": "1710"
+    }
+  ],
+  "tables": [
+    {
+      "table_name": "tbl_anomaly_events",
+      "table_rows": 10721
+    },
+    {
+      "table_name": "tbl_batch_anomaly_stats",
+      "table_rows": 1083
+    },
+    {
+      "table_name": "tbl_batch_feature_profile",
+      "table_rows": 189
+    },
+    {
+      "table_name": "tbl_batch_top_meters",
+      "table_rows": 180
+    },
+    {
+      "table_name": "tbl_benchmarks",
+      "table_rows": 42
+    },
+    {
+      "table_name": "tbl_data_quality",
+      "table_rows": 69
+    },
+    {
+      "table_name": "tbl_heartbeats",
+      "table_rows": 3
+    },
+    {
+      "table_name": "tbl_manual_checks",
+      "table_rows": 7
+    },
+    {
+      "table_name": "tbl_meters",
+      "table_rows": 1039
+    },
+    {
+      "table_name": "tbl_models",
+      "table_rows": 2
+    },
+    {
+      "table_name": "tbl_municipalities",
+      "table_rows": 14
+    },
+    {
+      "table_name": "tbl_pipeline_runs",
+      "table_rows": 4
+    },
+    {
+      "table_name": "tbl_readings_live",
+      "table_rows": 3030638
+    },
+    {
+      "table_name": "tbl_settings",
+      "table_rows": 4
+    },
+    {
+      "table_name": "tbl_stream_agg",
+      "table_rows": 10171
+    },
+    {
+      "table_name": "tbl_stream_batches",
+      "table_rows": 9455
+    },
+    {
+      "table_name": "tbl_stream_offsets",
+      "table_rows": 3
+    },
+    {
+      "table_name": "tbl_users",
+      "table_rows": 2
+    },
+    {
+      "table_name": "tbl_user_sessions",
+      "table_rows": 1
+    }
+  ],
+  "users": [
+    {
+      "role": "admin",
+      "n": 1
+    },
+    {
+      "role": "user",
+      "n": 1
+    }
+  ],
+  "kafka": {
+    "topic": "smart-meter-readings",
+    "partitions": 3,
+    "total_messages": 2024886
+  },
+  "outliers": {
+    "rows": 999536,
+    "features": [
+      {
+        "feature": "voltage_v",
+        "low": 209.565,
+        "high": 228.805,
+        "n": 34667,
+        "pct": 3.468309295513118,
+        "anom_share": 43.52554302362478
+      },
+      {
+        "feature": "current_a",
+        "low": -3.515,
+        "high": 10.365,
+        "n": 74343,
+        "pct": 7.437751116518064,
+        "anom_share": 14.001318214223263
+      },
+      {
+        "feature": "power_kw",
+        "low": -0.9919999999999998,
+        "high": 2.6799999999999997,
+        "n": 112696,
+        "pct": 11.274831521826128,
+        "anom_share": 8.311741321786045
+      },
+      {
+        "feature": "power_factor",
+        "low": 0.8320000000000001,
+        "high": 1.0319999999999998,
+        "n": 69738,
+        "pct": 6.977037345328233,
+        "anom_share": 4.334795950557802
+      },
+      {
+        "feature": "frequency_hz",
+        "low": 49.75999999999999,
+        "high": 50.24000000000001,
+        "n": 23069,
+        "pct": 2.3079708984969027,
+        "anom_share": 36.785296285057875
+      },
+      {
+        "feature": "temperature_c",
+        "low": 15.999999999999996,
+        "high": 34.400000000000006,
+        "n": 2378,
+        "pct": 0.23791039042115542,
+        "anom_share": 4.037005887300253
+      }
+    ],
+    "any_n": 227283,
+    "any_pct": 22.738850826783626,
+    "any_anom_share": 13.906451428395435,
+    "anom_caught": 80.57049631650055,
+    "per_type_caught": {
+      "Voltage Sag": 99.14174252275683,
+      "Over-Voltage": 100.0,
+      "Frequency Deviation": 100.0,
+      "Overload": 83.25376092243943,
+      "Energy Theft": 14.775051124744376,
+      "Meter Fault": 30.357142857142854
+    }
+  },
+  "cpu": [
+    {
+      "engine": "pandas",
+      "volume": "1M",
+      "ok": true,
+      "seconds": 3.6,
+      "cpu_avg_pct": 6.0,
+      "cpu_peak_pct": 9.7,
+      "mem_peak_gb": 0.61,
+      "logical_cpus": 32
+    },
+    {
+      "engine": "spark",
+      "volume": "1M",
+      "ok": true,
+      "seconds": 16.0,
+      "cpu_avg_pct": 42.6,
+      "cpu_peak_pct": 100.0,
+      "mem_peak_gb": 3.79,
+      "logical_cpus": 32
+    },
+    {
+      "engine": "spark",
+      "volume": "5GB",
+      "ok": true,
+      "seconds": 61.3,
+      "cpu_avg_pct": 73.2,
+      "cpu_peak_pct": 100.0,
+      "mem_peak_gb": 12.89,
+      "logical_cpus": 32
+    },
+    {
+      "engine": "spark",
+      "volume": "20GB",
+      "ok": true,
+      "seconds": 200.4,
+      "cpu_avg_pct": 78.0,
+      "cpu_peak_pct": 100.0,
+      "mem_peak_gb": 12.94,
+      "logical_cpus": 32
+    }
+  ],
+  "manual": {
+    "classes": [
+      "Normal",
+      "Voltage Sag",
+      "Energy Theft"
+    ],
+    "rows": [
+      {
+        "meter_id": "TL-ERM-012858",
+        "municipality": "Ermera",
+        "voltage_v": 212.09,
+        "voltage_dev_pct": -3.595,
+        "baseline_ratio": 0.823,
+        "hour": 20,
+        "Voltage": "Normal",
+        "Consumption": "Normal",
+        "Period": "Peak",
+        "anomaly_type": "Normal"
+      },
+      {
+        "meter_id": "TL-DIL-007097",
+        "municipality": "Dili",
+        "voltage_v": 219.63,
+        "voltage_dev_pct": -0.168,
+        "baseline_ratio": 0.961,
+        "hour": 0,
+        "Voltage": "Normal",
+        "Consumption": "Normal",
+        "Period": "Off-peak",
+        "anomaly_type": "Normal"
+      },
+      {
+        "meter_id": "TL-ERM-012372",
+        "municipality": "Ermera",
+        "voltage_v": 190.91,
+        "voltage_dev_pct": -13.223,
+        "baseline_ratio": 1.001,
+        "hour": 18,
+        "Voltage": "Low",
+        "Consumption": "Normal",
+        "Period": "Peak",
+        "anomaly_type": "Voltage Sag"
+      },
+      {
+        "meter_id": "TL-MNT-016559",
+        "municipality": "Manatuto",
+        "voltage_v": 220.56,
+        "voltage_dev_pct": 0.255,
+        "baseline_ratio": 0.095,
+        "hour": 15,
+        "Voltage": "Normal",
+        "Consumption": "Low",
+        "Period": "Off-peak",
+        "anomaly_type": "Energy Theft"
+      },
+      {
+        "meter_id": "TL-COV-006699",
+        "municipality": "Cova Lima",
+        "voltage_v": 187.72,
+        "voltage_dev_pct": -14.673,
+        "baseline_ratio": 0.86,
+        "hour": 0,
+        "Voltage": "Low",
+        "Consumption": "Normal",
+        "Period": "Off-peak",
+        "anomaly_type": "Voltage Sag"
+      },
+      {
+        "meter_id": "TL-AIL-000420",
+        "municipality": "Aileu",
+        "voltage_v": 221.77,
+        "voltage_dev_pct": 0.805,
+        "baseline_ratio": 0.873,
+        "hour": 14,
+        "Voltage": "Normal",
+        "Consumption": "Normal",
+        "Period": "Off-peak",
+        "anomaly_type": "Normal"
+      },
+      {
+        "meter_id": "TL-MNT-017292",
+        "municipality": "Manatuto",
+        "voltage_v": 219.86,
+        "voltage_dev_pct": -0.064,
+        "baseline_ratio": 0.245,
+        "hour": 17,
+        "Voltage": "Normal",
+        "Consumption": "Low",
+        "Period": "Off-peak",
+        "anomaly_type": "Energy Theft"
+      },
+      {
+        "meter_id": "TL-BAU-003763",
+        "municipality": "Baucau",
+        "voltage_v": 211.54,
+        "voltage_dev_pct": -3.845,
+        "baseline_ratio": 0.792,
+        "hour": 20,
+        "Voltage": "Normal",
+        "Consumption": "Normal",
+        "Period": "Peak",
+        "anomaly_type": "Normal"
+      },
+      {
+        "meter_id": "TL-ERM-012829",
+        "municipality": "Ermera",
+        "voltage_v": 219.35,
+        "voltage_dev_pct": -0.295,
+        "baseline_ratio": 0.782,
+        "hour": 16,
+        "Voltage": "Normal",
+        "Consumption": "Normal",
+        "Period": "Off-peak",
+        "anomaly_type": "Normal"
+      },
+      {
+        "meter_id": "TL-VIQ-020418",
+        "municipality": "Viqueque",
+        "voltage_v": 201.03,
+        "voltage_dev_pct": -8.623,
+        "baseline_ratio": 1.553,
+        "hour": 0,
+        "Voltage": "Low",
+        "Consumption": "Normal",
+        "Period": "Off-peak",
+        "anomaly_type": "Voltage Sag"
+      },
+      {
+        "meter_id": "TL-LAU-015110",
+        "municipality": "Lautém",
+        "voltage_v": 205.5,
+        "voltage_dev_pct": -6.591,
+        "baseline_ratio": 0.812,
+        "hour": 0,
+        "Voltage": "Low",
+        "Consumption": "Normal",
+        "Period": "Off-peak",
+        "anomaly_type": "Voltage Sag"
+      },
+      {
+        "meter_id": "TL-ERM-012180",
+        "municipality": "Ermera",
+        "voltage_v": 220.73,
+        "voltage_dev_pct": 0.332,
+        "baseline_ratio": 0.306,
+        "hour": 16,
+        "Voltage": "Normal",
+        "Consumption": "Low",
+        "Period": "Off-peak",
+        "anomaly_type": "Energy Theft"
+      }
+    ],
+    "counts": {
+      "Normal": 5,
+      "Voltage Sag": 4,
+      "Energy Theft": 3
+    },
+    "total_entropy": 1.5545851693377997,
+    "total_gini": 0.6527777777777778,
+    "attributes": {
+      "Voltage": {
+        "parts": [
+          {
+            "value": "Low",
+            "n": 4,
+            "Normal": 0,
+            "Voltage Sag": 4,
+            "Energy Theft": 0,
+            "entropy": -0.0,
+            "gini": 0.0
+          },
+          {
+            "value": "Normal",
+            "n": 8,
+            "Normal": 5,
+            "Voltage Sag": 0,
+            "Energy Theft": 3,
+            "entropy": 0.954434002924965,
+            "gini": 0.46875
+          }
+        ],
+        "gain": 0.9182958340544897,
+        "gini_gain": 0.3402777777777778
+      },
+      "Consumption": {
+        "parts": [
+          {
+            "value": "Low",
+            "n": 3,
+            "Normal": 0,
+            "Voltage Sag": 0,
+            "Energy Theft": 3,
+            "entropy": -0.0,
+            "gini": 0.0
+          },
+          {
+            "value": "Normal",
+            "n": 9,
+            "Normal": 5,
+            "Voltage Sag": 4,
+            "Energy Theft": 0,
+            "entropy": 0.9910760598382222,
+            "gini": 0.49382716049382713
+          }
+        ],
+        "gain": 0.8112781244591329,
+        "gini_gain": 0.28240740740740744
+      },
+      "Period": {
+        "parts": [
+          {
+            "value": "Off-peak",
+            "n": 9,
+            "Normal": 3,
+            "Voltage Sag": 3,
+            "Energy Theft": 3,
+            "entropy": 1.584962500721156,
+            "gini": 0.6666666666666667
+          },
+          {
+            "value": "Peak",
+            "n": 3,
+            "Normal": 2,
+            "Voltage Sag": 1,
+            "Energy Theft": 0,
+            "entropy": 0.9182958340544896,
+            "gini": 0.4444444444444444
+          }
+        ],
+        "gain": 0.1362893352833101,
+        "gini_gain": 0.04166666666666663
+      }
+    }
+  },
+  "vote_example": {
+    "model": {
+      "id": 13,
+      "algorithm": "random_forest",
+      "anomaly_f1": 0.954465
+    },
+    "inputs": {
+      "customer_type": "residential",
+      "municipality": "Dili",
+      "contracted_kva": 3.5,
+      "voltage_v": 221.0,
+      "power_kw": 0.08,
+      "power_factor": 0.95,
+      "frequency_hz": 50.0,
+      "temperature_c": 29.0,
+      "timestamp": "2026-11-06 20:00:00",
+      "phase": "single",
+      "current_a": 0.38,
+      "energy_kwh": 0.08
+    },
+    "features": {
+      "voltage_v": 221.0,
+      "voltage_dev_pct": 0.455,
+      "current_a": 0.38,
+      "power_kw": 0.08,
+      "power_factor": 0.95,
+      "frequency_hz": 50.0,
+      "freq_dev_hz": 0.0,
+      "temperature_c": 29.0,
+      "contracted_kva": 3.5,
+      "load_ratio": 0.0241,
+      "baseline_ratio": 0.0373,
+      "consistency_ratio": 1.0027,
+      "hour": 20,
+      "is_weekend": 0,
+      "baseline_kw": 2.1462
+    },
+    "predicted_type": "Energy Theft",
+    "predicted_type_tet": "Na'ok Eletrisidade",
+    "is_anomaly": true,
+    "anomaly_score": 1.0,
+    "confidence": 1.0,
+    "probabilities": {
+      "Normal": 0.0,
+      "Voltage Sag": 0.0,
+      "Over-Voltage": 0.0,
+      "Frequency Deviation": 0.0,
+      "Overload": 0.0,
+      "Energy Theft": 1.0,
+      "Meter Fault": 0.0
+    },
+    "votes": {
+      "Normal": 0,
+      "Voltage Sag": 0,
+      "Over-Voltage": 0,
+      "Frequency Deviation": 0,
+      "Overload": 0,
+      "Energy Theft": 150,
+      "Meter Fault": 0
+    },
+    "n_trees": 150,
+    "evidence": [
+      "Consumption 4% de'it husi meter baseline (suspeita Na'ok Eletrisidade)"
+    ]
+  },
+  "web_checks": [
+    {
+      "test": "Login page",
+      "expected": "Pájina login mosu antes asesu website",
+      "ok": true,
+      "detail": "tab User + tab Admin"
+    },
+    {
+      "test": "Password sala",
+      "expected": "Login rejeita",
+      "ok": true,
+      "detail": "mensajen erru mosu"
+    },
+    {
+      "test": "Konta User iha tab Admin",
+      "expected": "Login rejeita (role la hanesan)",
+      "ok": true,
+      "detail": "role tenke tuir tab"
+    },
+    {
+      "test": "Login User",
+      "expected": "Login susesu; menu Admin la mosu",
+      "ok": true,
+      "detail": "seksaun Monitorizasaun, Análize, Informasaun de'it"
+    },
+    {
+      "test": "User loke /simulation",
+      "expected": "Pájina Admin la loke ba User",
+      "ok": true,
+      "detail": "URL admin bloka"
+    },
+    {
+      "test": "User iha pájina Model",
+      "expected": "Retrain no ativa model: Admin de'it",
+      "ok": true,
+      "detail": "butaun retrain la mosu"
+    },
+    {
+      "test": "Logout",
+      "expected": "Fila ba pájina login",
+      "ok": true,
+      "detail": "sesaun hamoos"
+    },
+    {
+      "test": "Login Admin",
+      "expected": "Login susesu; menu Admin mosu",
+      "ok": true,
+      "detail": "Simulasaun + Jestaun Uzuáriu"
+    },
+    {
+      "test": "Sesaun hela",
+      "expected": "Loke URL foun la presiza login fali",
+      "ok": true,
+      "detail": "cookie sesaun pp_session"
+    },
+    {
+      "test": "Butaun Refresh",
+      "expected": "Dadus foti fali; oras 'Atualiza' muda",
+      "ok": true,
+      "detail": "Atualiza: 04:26:59 -> Atualiza: 04:27:06"
+    },
+    {
+      "test": "Night mode",
+      "expected": "Tema muda ba dark; login la lakon",
+      "ok": true,
+      "detail": "rgb(255, 255, 255) -> rgb(14, 17, 23)"
+    }
+  ],
+  "generated_at": "2026-11-08T06:30:41"
+}

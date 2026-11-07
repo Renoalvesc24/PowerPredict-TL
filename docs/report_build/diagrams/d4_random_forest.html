@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="style.css"></head><body>
+<div class="canvas" style="width:1340px">
+  <div class="title">Lala'ok Algoritmu Random Forest ba Deteksaun Anomalia</div>
+  <div class="sub">Bagging + random feature selection + Gini Impurity + majority voting → tipu anomalia no Anomaly Score</div>
+  <div class="row">
+    <div class="box" style="width:210px"><h4>Training set (20GB)</h4><p>1,079,003 readings husi meters treinu: Normal 600k (undersampled) + anomalia hotu (to'o 80k / tipu); class_weight Normal = 4</p></div>
+    <div class="arrow">→</div>
+    <div class="col" style="gap:8px;width:230px">
+      <div class="box amber"><h4>Bootstrap sample 1</h4><p>Tree 1: kada split haree feature aleatóriu 4</p></div>
+      <div class="box amber"><h4>Bootstrap sample 2</h4><p>Tree 2: kada split haree feature aleatóriu 4</p></div>
+      <div class="box amber"><h4>… sample 150</h4><p>Tree 150 (max_depth 24, Gini)</p></div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="box purple" style="width:230px"><h4>Majority voting</h4><p>Kada tree vota tipu ida. P(tipu) = média probabilidade tree sira</p><p style="margin-top:6px"><b>Ezemplu:</b> reading 0.08 kW iha 20:00 → tree 150 hotu vota Na'ok Eletrisidade</p></div>
+    <div class="arrow">→</div>
+    <div class="box green" style="width:260px"><h4>Output</h4><ul><li>Tipu = argmax P(tipu)</li><li>Anomaly Score = 1 − P(Normal)</li><li>Event se Score ≥ threshold 0.6</li><li>Feature Importance (Gini)</li></ul></div>
+  </div>
+</div></body></html>

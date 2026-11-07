@@ -1,0 +1,68 @@
+[
+  {
+    "test": "Login page",
+    "expected": "Pájina login mosu antes asesu website",
+    "ok": true,
+    "detail": "tab User + tab Admin"
+  },
+  {
+    "test": "Password sala",
+    "expected": "Login rejeita",
+    "ok": true,
+    "detail": "mensajen erru mosu"
+  },
+  {
+    "test": "Konta User iha tab Admin",
+    "expected": "Login rejeita (role la hanesan)",
+    "ok": true,
+    "detail": "role tenke tuir tab"
+  },
+  {
+    "test": "Login User",
+    "expected": "Login susesu; menu Admin la mosu",
+    "ok": true,
+    "detail": "seksaun Monitorizasaun, Análize, Informasaun de'it"
+  },
+  {
+    "test": "User loke /simulation",
+    "expected": "Pájina Admin la loke ba User",
+    "ok": true,
+    "detail": "URL admin bloka"
+  },
+  {
+    "test": "User iha pájina Model",
+    "expected": "Retrain no ativa model: Admin de'it",
+    "ok": true,
+    "detail": "butaun retrain la mosu"
+  },
+  {
+    "test": "Logout",
+    "expected": "Fila ba pájina login",
+    "ok": true,
+    "detail": "sesaun hamoos"
+  },
+  {
+    "test": "Login Admin",
+    "expected": "Login susesu; menu Admin mosu",
+    "ok": true,
+    "detail": "Simulasaun + Jestaun Uzuáriu"
+  },
+  {
+    "test": "Sesaun hela",
+    "expected": "Loke URL foun la presiza login fali",
+    "ok": true,
+    "detail": "cookie sesaun pp_session"
+  },
+  {
+    "test": "Butaun Refresh",
+    "expected": "Dadus foti fali; oras 'Atualiza' muda",
+    "ok": true,
+    "detail": "Atualiza: 04:26:59 -> Atualiza: 04:27:06"
+  },
+  {
+    "test": "Night mode",
+    "expected": "Tema muda ba dark; login la lakon",
+    "ok": true,
+    "detail": "rgb(255, 255, 255) -> rgb(14, 17, 23)"
+  }
+]

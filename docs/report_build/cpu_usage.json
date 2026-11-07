@@ -1,0 +1,42 @@
+[
+  {
+    "engine": "pandas",
+    "volume": "1M",
+    "ok": true,
+    "seconds": 3.6,
+    "cpu_avg_pct": 6.0,
+    "cpu_peak_pct": 9.7,
+    "mem_peak_gb": 0.61,
+    "logical_cpus": 32
+  },
+  {
+    "engine": "spark",
+    "volume": "1M",
+    "ok": true,
+    "seconds": 16.0,
+    "cpu_avg_pct": 42.6,
+    "cpu_peak_pct": 100.0,
+    "mem_peak_gb": 3.79,
+    "logical_cpus": 32
+  },
+  {
+    "engine": "spark",
+    "volume": "5GB",
+    "ok": true,
+    "seconds": 61.3,
+    "cpu_avg_pct": 73.2,
+    "cpu_peak_pct": 100.0,
+    "mem_peak_gb": 12.89,
+    "logical_cpus": 32
+  },
+  {
+    "engine": "spark",
+    "volume": "20GB",
+    "ok": true,
+    "seconds": 200.4,
+    "cpu_avg_pct": 78.0,
+    "cpu_peak_pct": 100.0,
+    "mem_peak_gb": 12.94,
+    "logical_cpus": 32
+  }
+]

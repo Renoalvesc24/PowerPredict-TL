@@ -1,0 +1,43 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="style.css"></head><body>
+<div class="canvas" style="width:1340px">
+  <div class="title">Arkitetura Sistema Big Data (Lambda Architecture)</div>
+  <div class="sub">Data Collection → Data Ingestion → Data Storage → Data Processing → Machine Learning → Visualization → Real-Time Application</div>
+  <div class="row">
+    <div class="col" style="gap:12px;width:220px">
+      <div class="lane"><span class="lane-title">1 · Data Source</span>
+        <div class="box gray" style="margin-top:6px"><h4>bot/bot_live.py</h4><p>Smart meter 281, reading kada 2 s, anomalia + ground truth</p></div>
+        <div class="box gray" style="margin-top:8px"><h4>Open-Meteo API</h4><p>Temperature live (kapitál 14) + arkivu 2025</p></div>
+        <div class="box gray" style="margin-top:8px"><h4>UCI dataset (reál)</h4><p>Seed konsumu → Dataset 5 GB · 10 GB · 20 GB</p></div>
+      </div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="col" style="gap:14px;width:850px">
+      <div class="lane"><span class="lane-title">Speed layer (real-time)</span>
+        <div class="row" style="margin-top:6px">
+          <div class="box dark" style="width:150px"><h4>2 · FastAPI</h4><p>Gateway: POST /api/readings/batch, validasaun structure</p></div>
+          <div class="arrow">→</div>
+          <div class="box amber" style="width:165px"><h4>2 · Apache Kafka</h4><p>Topic <b>smart-meter-readings</b>, partition 3, key = meter_id</p></div>
+          <div class="arrow">→</div>
+          <div class="box" style="width:190px"><h4>3 · Spark Streaming</h4><p>Micro-batch 3 s: parse → validation → feature → window 1 min + watermark 2 min</p></div>
+          <div class="arrow">→</div>
+          <div class="box purple" style="width:170px"><h4>5 · Random Forest</h4><p>Tipu anomalia + Anomaly Score = 1 − P(Normal)</p></div>
+        </div>
+      </div>
+      <div class="lane"><span class="lane-title">Batch layer (big data)</span>
+        <div class="row" style="margin-top:6px">
+          <div class="box green" style="width:180px"><h4>4 · Data Lake (D:)</h4><p>Raw zone (CSV 35.8 GB) · Curated zone (Parquet) · Stream zone</p></div>
+          <div class="arrow">→</div>
+          <div class="box" style="width:210px"><h4>3 · Spark Batch ETL</h4><p>Data Quality, Cleaning, Feature Engineering, broadcast join, anomaly analytics, train/test split</p></div>
+          <div class="arrow">→</div>
+          <div class="box purple" style="width:245px"><h4>5 · Random Forest training</h4><p>scikit-learn (training sample 1,079,003) + Spark MLlib (readings 2.3 millaun) → model ativu</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="col" style="gap:12px;width:200px">
+      <div class="box green"><h4>4 · MySQL (XAMPP)</h4><p>Database <b>powerpredict_db</b>: table 19 (readings, events, models, users, Spark results)</p></div>
+      <div class="arrow down">↓</div>
+      <div class="box dark"><h4>6 · Streamlit Dashboard</h4><p>Login Admin / User, pájina 9, Refresh, Night mode, alerta, simulasaun</p></div>
+    </div>
+  </div>
+</div></body></html>

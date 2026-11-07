@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="style.css"></head><body>
+<div class="canvas" style="width:1340px">
+  <div class="title">Block Diagram – PowerPredict TL (Deteksaun Anomalia)</div>
+  <div class="sub">Husi readings smart meter to'o rezultadu deteksaun anomalia uza algoritmu Random Forest</div>
+  <div class="row">
+    <div class="box" style="width:200px"><h4>a) Input (smart meter)</h4><ul><li>Voltage (V), Current (A)</li><li>Power (kW), Power Factor</li><li>Frequency (Hz)</li><li>Temperature (°C)</li><li>Meter master: kVA, customer type, baseline</li></ul></div>
+    <div class="arrow">→</div>
+    <div class="box amber" style="width:205px"><h4>b) Data Processing (Spark)</h4><ul><li>Data Cleaning (missing, duplicate, invalid)</li><li>Feature Engineering: load ratio, baseline ratio, consistency ratio</li><li>Ground truth label husi events</li></ul></div>
+    <div class="arrow">→</div>
+    <div class="box purple" style="width:205px"><h4>c) Model Training</h4><ul><li>Bootstrap (bagging)</li><li>Random feature selection (√16 ≈ 4)</li><li>Gini Impurity ba split</li><li>Decision tree 150</li><li>class_weight Normal = 4</li></ul></div>
+    <div class="arrow">→</div>
+    <div class="box" style="width:185px"><h4>d) Random Forest Model</h4><p>Model (joblib) + Feature Importance, rai iha <b>tbl_models</b>; Spark MLlib Random Forest ba Big Data</p></div>
+    <div class="arrow">→</div>
+    <div class="box gray" style="width:175px"><h4>e) Testing</h4><p>Test set husi meters separadu (1 husi 5) + live stream husi Kafka</p></div>
+    <div class="arrow">→</div>
+    <div class="box green" style="width:215px"><h4>f) Output Deteksaun</h4><div class="out" style="flex-direction:column;gap:5px"><span class="pill n">Normal</span><span class="pill" style="background:#e8f0fb;color:#2a5fb0">Voltajen Tun</span><span class="pill" style="background:#fdeee6;color:#b5491d">Voltajen Sa'e Liu</span><span class="pill" style="background:#e3f6ef;color:#12805a">Frekuénsia La Estável</span><span class="pill" style="background:#fdf3dc;color:#9a6a00">Karga Liu</span><span class="pill" style="background:#fbe9f0;color:#b03a6a">Na'ok Eletrisidade</span><span class="pill" style="background:#e3f2e3;color:#106b10">Kontador Aat</span></div><p style="margin-top:6px">+ Anomaly Score = 1 − P(Normal)</p></div>
+  </div>
+</div></body></html>
