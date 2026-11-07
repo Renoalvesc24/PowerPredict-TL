@@ -9,6 +9,7 @@ import ui
 from common import domain as D
 
 ui.page_header("Metodolojia", "about", "Sistema Deteksaun Anomalia Rede Eletrisidade Real Time uza metodu Random Forest (Capstone Project)")
+st.caption("Grupu 7 · Reinaldo N. M. Alves Costa [2301020110084] · Alexandre E. Lisboa Ximenes [2301020110003] · Big Data Capstone Project, Dili Institute of Technology (DIT) 2026")
 
 st.header("1. Dadus mai husi ne'ebé? (Data Source)")
 st.markdown("""

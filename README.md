@@ -1,8 +1,13 @@
 # Sistema Deteksaun Anomalia Rede Eletrisidade Real Time uza metodu Random Forest (Capstone Project)
 **PowerPredict TL - Big Data Capstone Project, Dili Institute of Technology (DIT) 2026**
 
-## 👤 Estudante
-- Reinaldo Nodi Moreno Alves Costa (NIM 2301020110082) - Bacharelatu Siénsia Komputador, DIT
+## 👥 Membru Grupu 7
+| Naran | NIM |
+|---|---|
+| Reinaldo N. M. Alves Costa | 2301020110084 |
+| Alexandre E. Lisboa Ximenes | 2301020110003 |
+
+Bacharelatu Siénsia Komputador, Dili Institute of Technology (DIT)
 
 ## 🛠️ Teknolojia ne'ebé Uza
 Python 3.11, Apache Kafka 3.9 (KRaft), Apache Spark 3.5 (PySpark, Spark SQL, MLlib), FastAPI, scikit-learn (Random Forest),

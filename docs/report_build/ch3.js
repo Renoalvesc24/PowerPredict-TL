@@ -18,7 +18,7 @@ module.exports = function (F) {
   out.push(h1("KAPITULU III", "METODOLOJIA PESKIZA"));
   // ---------------------------------------------------------------- 3.1
   out.push(h2("3.1. Fatin no Tempu Peskiza (Research Location and Time)"));
-  out.push(p("Peskiza ida ne'e hala'o iha Biblioteka Dili Institute of Technology (DIT) no iha uma autór nian iha Dili, durante semestre unidade kurikuler Big Data (semana 16) tuir planu Capstone Project DIT. Dezenvolvimentu, testing no evaluasaun sistema remata iha fulan Novembru 2026."));
+  out.push(p("Peskiza ida ne'e hala'o iha Biblioteka Dili Institute of Technology (DIT) no iha uma membru grupu nian iha Dili, durante semestre unidade kurikuler Big Data (semana 16) tuir planu Capstone Project DIT. Dezenvolvimentu, testing no evaluasaun sistema remata iha fulan Novembru 2026."));
 
   // ---------------------------------------------------------------- 3.2 stages + 16-week plan (manual 8 + 9)
   out.push(h2("3.2. Etapa no Oráriu Peskiza"));

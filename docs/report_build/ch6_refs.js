@@ -16,7 +16,7 @@ module.exports = function (F) {
 
   out.push(h1("KAPITULU VI", "KONKLUZAUN NO REKOMENDASAUN"));
   out.push(h2("6.1. Konkluzaun"));
-  out.push(p("Bazeia ba rezultadu peskiza no dezenvolvimentu Sistema Deteksaun Anomalia Rede Eletrisidade Real Time uza metodu Random Forest, hakerek-na'in foti konkluzaun tuir mai:"));
+  out.push(p("Bazeia ba rezultadu peskiza no dezenvolvimentu Sistema Deteksaun Anomalia Rede Eletrisidade Real Time uza metodu Random Forest, hakerek-na'in sira foti konkluzaun tuir mai:"));
   out.push(...numbers([
     `Sistema Big Data implementa ho susesu pipeline kompletu tuir manual Capstone Project: Data Collection (bot smart meter, Open-Meteo, jeradór dataset) → Data Ingestion (FastAPI + Apache Kafka) → Data Storage (Data Lake Parquet + MySQL) → Data Processing (Spark batch ETL no Spark Streaming ho window no watermark) → Machine Learning (Random Forest) → Visualization (website Streamlit ho login no pájina 9) → Real-Time Application (Anomaly Score, anomaly events no simulasaun).`,
     `Métodu eskala dadus husi aprezentasaun individuál aplika ho susesu: seed reál (UCI no Open-Meteo) eskala ba dataset 5 GB, 10 GB no 20 GB ho records totál ${fmt(F.datasets.reduce((a, x) => a + x.rows, 0))} ho events anomalia neen no ground truth label. Spark ETL prosesa dataset 20 GB (records ${fmt(ETL20.input_rows / 1e6, 1)} millaun) iha ${ETL20.seconds.toFixed(0)} segundu.`,
@@ -115,7 +115,7 @@ module.exports = function (F) {
     ["YouTube Link", "Entrega ho relatóriu", "Hakerek iha leten"],
   ], [24, 34, 42], { caption: "Rekezitu vídeo demonstrasaun", firstColBold: true, size: 17 }));
   out.push(...table(["Parte", "Durasaun", "Konteúdu PowerPredict TL"], [
-    ["1 – Introdusaun", "1–2 min", "Naran no ID estudante, títulu projetu, unidade kurikuler Big Data, problema: anomalia rede no na'ok eletrisidade"],
+    ["1 – Introdusaun", "1–2 min", "Naran no NIM membru grupu na'in rua, títulu projetu, unidade kurikuler Big Data, problema: anomalia rede no na'ok eletrisidade"],
     ["2 – Problem & Objectives", "1–2 min", "Problem statement (seksaun 1.2), objetivu (1.4), benefísiu ba EDTL (1.5)"],
     ["3 – Big Data Architecture", "2–3 min", "Bot / Open-Meteo / UCI → FastAPI → Kafka → Spark → Data Lake + MySQL → Random Forest → Dashboard (Imajen 4.1, 4.3)"],
     ["4 – Implementasaun", "3–5 min", "Dataset 5 / 10 / 20 GB, Kafka topic, Spark Streaming, Spark ETL, Data Lake, Random Forest (scikit-learn + MLlib)"],

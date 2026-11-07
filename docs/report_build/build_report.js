@@ -21,9 +21,9 @@ function cover() {
     c("Sistema Deteksaun Anomalia Rede Eletrisidade Real Time uza metodu Random Forest (Capstone Project)", { size: 28, after: 480, line: 320 }),
     new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 480 },
       children: [new ImageRun({ type: "png", data: logo, transformation: { width: 300, height: 214 } })] }),
-    c("Prepara husi:", { after: 160 }),
-    c("Reinaldo Nodi Moreno Alves Costa", { after: 160 }),
-    c("2301020110082", { after: 160 }),
+    c("Prepara husi (Grupu 7):", { after: 160 }),
+    c("Reinaldo N. M. Alves Costa [2301020110084]", { after: 120 }),
+    c("Alexandre E. Lisboa Ximenes [2301020110003]", { after: 160 }),
     c("UNIDADE KURIKULER: BIG DATA", { after: 960 }),
     c("DEPARTAMENTU SIENSIA KOMPUTADOR", { after: 200 }),
     c("FAKULDADE SIENSIA NO ENJENHARIA", { after: 200 }),
@@ -42,7 +42,7 @@ const body = [
 ];
 
 const doc = new Document({
-  creator: "Reinaldo Nodi Moreno Alves Costa",
+  creator: "Reinaldo N. M. Alves Costa; Alexandre E. Lisboa Ximenes",
   title: "Sistema Deteksaun Anomalia Rede Eletrisidade Real Time uza metodu Random Forest (Capstone Project)",
   description: "Deteksaun anomalia rede eletrisidade real-time ho Big Data no Random Forest",
   features: { updateFields: true },
