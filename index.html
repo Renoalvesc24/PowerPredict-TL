@@ -32,15 +32,15 @@
   <h1>PowerPredict TL</h1>
   <p>Sistema Deteksaun Anomalia Rede Eletrisidade Real Time uza metodu Random Forest:
      smart meter → Kafka → Spark Streaming → Random Forest → dashboard live.</p>
-  <a class="btn" id="go" href="#">Loke sistema live</a>
+  <a class="btn" id="go" href="https://clinics-separated-head-sms.trycloudflare.com">Loke sistema live</a>
   <div id="status">Hein uitoan, ita sei ba sistema live…</div>
   <footer>Reinaldo N. M. Alves Costa · Alexandre E. Lisboa Ximenes<br>
     Source code: <a href="https://github.com/Renoalvesc24/PowerPredict-TL">github.com/Renoalvesc24/PowerPredict-TL</a><br>
-    Link atualiza: -</footer>
+    Link atualiza: 2026-11-08 13:55</footer>
 </main>
 <script>
   // The live system runs on the group's computer; check it is online before forwarding.
-  const url = "#";
+  const url = "https://clinics-separated-head-sms.trycloudflare.com";
   const s = document.getElementById("status");
   fetch(url, { mode: "no-cors", cache: "no-store" })
     .then(() => { s.innerHTML = '<span class="ok">● Sistema online</span> – loke agora…'; setTimeout(() => location.href = url, 1200); })
