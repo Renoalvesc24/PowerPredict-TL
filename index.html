@@ -17,9 +17,9 @@
   .kick { color: var(--amber); font-weight: 800; letter-spacing: 3px; font-size: 13px; }
   h1 { font-size: clamp(30px, 7vw, 46px); line-height: 1.1; margin: 10px 0 12px; }
   p { color: var(--muted); line-height: 1.55; }
-  a.btn { display: inline-block; margin-top: 26px; padding: 14px 26px; border-radius: 12px; background: var(--amber);
+  a.btn { display: none; margin-top: 26px; padding: 14px 26px; border-radius: 12px; background: var(--amber);
     color: var(--navy); font-weight: 800; text-decoration: none; font-size: 18px; }
-  #status { margin-top: 18px; font-size: 14px; }
+  #status { margin-top: 22px; font-size: 15px; min-height: 22px; }
   .ok { color: #3DDC97; } .off { color: #FF8A8A; }
   footer { margin-top: 34px; font-size: 13px; color: var(--muted); }
   footer a { color: var(--ink); }
@@ -32,19 +32,35 @@
   <h1>PowerPredict TL</h1>
   <p>Sistema Deteksaun Anomalia Rede Eletrisidade Real Time uza metodu Random Forest:
      smart meter → Kafka → Spark Streaming → Random Forest → dashboard live.</p>
-  <a class="btn" id="go" href="https://admission-warning-keith-diffs.trycloudflare.com">Loke sistema live</a>
-  <div id="status">Hein uitoan, ita sei ba sistema live…</div>
+  <a class="btn" id="go" href="#">Loke sistema live</a>
+  <div id="status">Hein uitoan, buka sistema live…</div>
   <footer>Reinaldo N. M. Alves Costa · Alexandre E. Lisboa Ximenes<br>
     Source code: <a href="https://github.com/Renoalvesc24/PowerPredict-TL">github.com/Renoalvesc24/PowerPredict-TL</a><br>
-    Link atualiza: 2026-11-08 14:19</footer>
+    <span id="upd"></span></footer>
 </main>
 <script>
-  // The live system runs on the group's computer; check it is online before forwarding.
-  const url = "https://admission-warning-keith-diffs.trycloudflare.com";
-  const s = document.getElementById("status");
-  fetch(url, { mode: "no-cors", cache: "no-store" })
-    .then(() => { s.innerHTML = '<span class="ok">● Sistema online</span> – loke agora…'; setTimeout(() => location.href = url, 1200); })
-    .catch(() => { s.innerHTML = '<span class="off">● Sistema offline agora</span> – komputadór grupu la ativu. Koko fali depois.'; });
+  // The live system runs on the group's computer behind a Cloudflare tunnel whose address changes.
+  // live.json (fetched fresh, never cached) holds the current address; the site's icon is loaded as a
+  // probe, because a stopped tunnel answers with Cloudflare's error page instead of the image.
+  const s = document.getElementById("status"), go = document.getElementById("go");
+  const offline = (why) => { s.innerHTML = '<span class="off">● Sistema offline agora</span> – ' + why + ' Koko fali depois.'; };
+  fetch("live.json?t=" + Date.now(), { cache: "no-store" })
+    .then((r) => r.json())
+    .then((live) => {
+      document.getElementById("upd").textContent = "Link atualiza: " + live.updated;
+      go.href = live.url;
+      const img = new Image();
+      const timer = setTimeout(() => { img.src = ""; offline("komputadór grupu la responde."); go.style.display = "inline-block"; }, 9000);
+      img.onload = () => {
+        clearTimeout(timer);
+        s.innerHTML = '<span class="ok">● Sistema online</span> – loke agora…';
+        go.style.display = "inline-block";
+        setTimeout(() => { location.href = live.url; }, 900);
+      };
+      img.onerror = () => { clearTimeout(timer); offline("komputadór grupu la ativu."); };
+      img.src = live.url + "/favicon.png?t=" + Date.now();
+    })
+    .catch(() => offline("la hetan enderesu sistema."));
 </script>
 </body>
 </html>
