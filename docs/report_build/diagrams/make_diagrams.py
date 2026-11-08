@@ -158,6 +158,28 @@ D["d5_streaming"] = """
 </div>"""
 
 
+D["d10_public"] = """
+<div class="canvas" style="width:1340px">
+  <div class="title">Publikasaun Website ba Internet: GitHub Pages → Cloudflare Tunnel → Website Publiku (Konvidadu)</div>
+  <div class="sub">Link permanente la muda; enderesu tunnel muda kada start_all.bat, nune'e live.json rai enderesu foun · HTTPS husi Cloudflare, la presiza loke port iha router</div>
+  <div class="row">
+    <div class="box gray" style="width:150px"><h4>Vizitante</h4><p>Browser (HP / laptop) iha fatin ruma, la presiza konta</p></div>
+    <div class="arrow">→</div>
+    <div class="box" style="width:190px"><h4>GitHub Pages</h4><p>renoalvesc24.github.io/<br>PowerPredict-TL/<br>index.html + <b>live.json</b> (url, updated)</p></div>
+    <div class="arrow">→</div>
+    <div class="box amber" style="width:165px"><h4>Probe</h4><p>Karrega &lt;url&gt;/favicon.png: imajen = online → redirect; erru 530 = offline</p></div>
+    <div class="arrow">→</div>
+    <div class="box dark" style="width:170px"><h4>Cloudflare edge</h4><p>https://&lt;random&gt;.<br>trycloudflare.com<br>sertifikadu HTTPS, protesaun DDoS</p></div>
+    <div class="arrow">→</div>
+    <div class="box purple" style="width:170px"><h4>cloudflared (PC grupu)</h4><p>Koneksaun sai de'it (outbound), --metrics /quicktunnel fó enderesu</p></div>
+    <div class="arrow">→</div>
+    <div class="box green" style="width:185px"><h4>Streamlit :8510</h4><p>PP_PUBLIC_GUEST=1, PP_PUBLIC_NO_LOGIN=1: konvidadu read-only, pájina admin la iha</p></div>
+  </div>
+  <div class="row" style="margin-top:16px;justify-content:flex-end">
+    <div class="box gray" style="width:560px"><h4>Sistema live hanesan (start_all.bat)</h4><p>Bot → FastAPI :8000 → Kafka → Spark Streaming → Random Forest → MySQL powerpredict_db. Website publiku lee database hanesan ho dashboard admin :8505 (localhost de'it).</p></div>
+  </div>
+</div>"""
+
 def _cls(r):
     return ' class="k"' if r.endswith("PK") else (' class="f"' if "FK*" in r else "")
 
