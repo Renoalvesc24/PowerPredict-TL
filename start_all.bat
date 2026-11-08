@@ -9,7 +9,7 @@ cd /d "%~dp0"
 title PowerPredict TL launcher
 set "CHECK=powershell -NoProfile -ExecutionPolicy Bypass -File setup\check_running.ps1"
 
-echo [1/5] Apache Kafka (KRaft) ...
+echo [1/6] Apache Kafka (KRaft) ...
 %CHECK% -Pattern "\skafka\.Kafka\s" -Port 9092
 if errorlevel 1 goto kafka_start
 echo      ativu ona - la hahu dala rua.
@@ -20,7 +20,7 @@ echo      hein 20 s ba Kafka ...
 timeout /t 20 /nobreak >nul
 
 :api
-echo [2/5] FastAPI gateway  http://127.0.0.1:8000/docs ...
+echo [2/6] FastAPI gateway  http://127.0.0.1:8000/docs ...
 %CHECK% -Pattern "uvicorn api\.main" -Port 8000
 if errorlevel 1 goto api_start
 echo      ativu ona - la hahu dala rua.
@@ -30,7 +30,7 @@ start "PowerPredict - API" cmd /k python -W ignore -m uvicorn api.main:app --hos
 timeout /t 5 /nobreak >nul
 
 :stream
-echo [3/5] Spark Streaming (Kafka -^> Spark -^> Random Forest -^> MySQL) ...
+echo [3/6] Spark Streaming (Kafka -^> Spark -^> Random Forest -^> MySQL) ...
 %CHECK% -Pattern "pipeline\.spark_streaming"
 if errorlevel 1 goto stream_start
 echo      ativu ona - la hahu dala rua.
@@ -39,7 +39,7 @@ goto bot
 start "PowerPredict - Spark Streaming" cmd /k python -W ignore -m pipeline.spark_streaming --engine spark --from-latest
 
 :bot
-echo [4/5] Meter bot (281 meters, reading kada 2 s) ...
+echo [4/6] Meter bot (281 meters, reading kada 2 s) ...
 %CHECK% -Pattern "bot\.bot_live"
 if errorlevel 1 goto bot_start
 echo      ativu ona - la hahu dala rua.
@@ -48,7 +48,7 @@ goto dashboard
 start "PowerPredict - Bot" cmd /k python -W ignore -m bot.bot_live
 
 :dashboard
-echo [5/5] Dashboard Streamlit  http://localhost:8505 ...
+echo [5/6] Dashboard Streamlit  http://localhost:8505 ...
 %CHECK% -Pattern "dashboard[\\/]app\.py" -Port 8505
 if errorlevel 1 goto dashboard_start
 echo      ativu ona - la hahu dala rua.
@@ -59,6 +59,11 @@ timeout /t 8 /nobreak >nul
 
 :browser
 start "" http://localhost:8505
+
+:public
+echo [6/6] Website publiku (internet, konvidadu de'it) + link permanente ...
+echo      https://renoalvesc24.github.io/PowerPredict-TL/
+powershell -NoProfile -ExecutionPolicy Bypass -File setup\public_site.ps1
 
 echo.
 echo Komponente hotu hahu ona iha janela rasik. Taka janela (ka Ctrl+C) atu para.
