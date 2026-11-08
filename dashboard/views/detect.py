@@ -7,6 +7,7 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
+import auth
 import charts as C
 import data
 import ui
@@ -75,11 +76,12 @@ with right:
                 st.error(str(exc))
                 st.stop()
             st.session_state["last_detect"] = res
-            db.bulk_insert(db.manual_checks, [{
-                "model_id": res["model"]["id"], "meter_id": m.meter_id, "inputs": db.to_json(res["inputs"]),
-                "predicted_type": res["predicted_type"], "anomaly_score": res["anomaly_score"],
-                "confidence": res["confidence"], "probabilities": db.to_json(res["probabilities"]),
-                "votes": db.to_json(res["votes"])}])
+            if not auth.is_guest():          # public guests: result only, nothing stored
+                db.bulk_insert(db.manual_checks, [{
+                    "model_id": res["model"]["id"], "meter_id": m.meter_id, "inputs": db.to_json(res["inputs"]),
+                    "predicted_type": res["predicted_type"], "anomaly_score": res["anomaly_score"],
+                    "confidence": res["confidence"], "probabilities": db.to_json(res["probabilities"]),
+                    "votes": db.to_json(res["votes"])}])
         res = st.session_state["last_detect"]
         t = res["predicted_type"]
         box = st.success if t == D.NORMAL else st.error

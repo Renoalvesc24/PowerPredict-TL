@@ -22,6 +22,8 @@ from common import db
 
 ROLES = {"admin": "Admin", "user": "User"}
 COOKIE = "pp_session"
+GUEST_COOKIE = "pp_guest"          # public website only (config.PUBLIC_GUEST)
+GUEST = {"id": 0, "username": "konvidadu", "full_name": "Konvidadu", "role": "guest"}
 SESSION_HOURS = 8
 ITERATIONS = 260_000
 MIN_PASSWORD = 8
@@ -90,8 +92,12 @@ def current_user() -> dict | None:
     ensure_tables()
     if st.session_state.get("user"):
         return st.session_state["user"]
+    if (config.PUBLIC_GUEST and st.context.cookies.get(GUEST_COOKIE) == "1"
+            and not st.session_state.get("_guest_logged_out")):   # cookie is only re-read on reload
+        st.session_state["user"] = dict(GUEST)
+        return st.session_state["user"]
     token = st.context.cookies.get(COOKIE)
-    if not token:
+    if not token or config.PUBLIC_NO_LOGIN:
         return None
     with db.begin() as conn:
         row = conn.execute(
@@ -107,6 +113,8 @@ def current_user() -> dict | None:
 
 def login(username: str, password: str, portal: str) -> tuple[dict | None, str]:
     """portal = 'admin' or 'user'. Returns (user, error message)."""
+    if config.PUBLIC_NO_LOGIN:
+        return None, "Login la ativu iha versaun públiku - uza 'Tama hanesan konvidadu'."
     with db.begin() as conn:
         row = conn.execute(select(db.users).where(db.users.c.username == username.strip())).first()
         if not row or not verify_password(password, row.password_hash):
@@ -126,7 +134,26 @@ def login(username: str, password: str, portal: str) -> tuple[dict | None, str]:
     return user, ""
 
 
+def guest_login() -> None:
+    """Read-only visitor of the public website: no account, no database session."""
+    if not config.PUBLIC_GUEST:
+        return
+    st.session_state["user"] = dict(GUEST)
+    st.session_state["_set_guest_cookie"] = "1"
+    st.session_state.pop("_guest_logged_out", None)
+
+
+def is_guest(user: dict | None = None) -> bool:
+    user = user or st.session_state.get("user")
+    return bool(user) and user.get("role") == "guest"
+
+
 def logout() -> None:
+    if is_guest():
+        st.session_state.pop("user", None)
+        st.session_state["_set_guest_cookie"] = ""
+        st.session_state["_guest_logged_out"] = True
+        return
     token = st.session_state.get("token") or st.context.cookies.get(COOKIE)
     if token:
         with db.begin() as conn:
@@ -138,6 +165,10 @@ def logout() -> None:
 
 def cookie_script() -> None:
     """Write / clear the session cookie (runs once after login or logout)."""
+    if "_set_guest_cookie" in st.session_state:
+        g = st.session_state.pop("_set_guest_cookie")
+        st.html(f"<script>document.cookie = '{GUEST_COOKIE}={g}; path=/; max-age={86400 if g else 0}; SameSite=Strict';</script>",
+                unsafe_allow_javascript=True, width="content")
     if "_set_cookie" not in st.session_state:
         return
     token = st.session_state.pop("_set_cookie")

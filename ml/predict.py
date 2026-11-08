@@ -47,7 +47,7 @@ def load_active(task: str = "supervised", force: bool = False, max_age_s: float 
             c.update(id=None, obj=None, row=None)
             return None, None
         if row["id"] != c["id"]:
-            c.update(id=row["id"], obj=joblib.load(config.ROOT / row["file_path"]), row=row)
+            c.update(id=row["id"], obj=joblib.load(config.ROOT / row["file_path"].replace("\\", "/")), row=row)
         return c["row"], c["obj"]
 
 

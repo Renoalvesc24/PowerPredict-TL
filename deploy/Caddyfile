@@ -1,0 +1,10 @@
+# HTTPS (automatic Let's Encrypt certificate) in front of the Streamlit website
+{$PP_DOMAIN} {
+	encode gzip
+	reverse_proxy dashboard:8505
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+	}
+}

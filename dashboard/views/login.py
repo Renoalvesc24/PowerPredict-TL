@@ -4,6 +4,7 @@ login.py - pájina login: tab User no tab Admin (role mai husi konta iha tbl_use
 import streamlit as st
 
 import auth
+import config
 import ui
 
 st.html("<style>[data-testid='stSidebar'], [data-testid='stSidebarCollapsedControl'], "
@@ -19,6 +20,16 @@ with mid:
     if not auth.has_accounts():
         st.warning("Seidauk iha konta. Hakerek PP_ADMIN_USERNAME / PP_ADMIN_PASSWORD (no PP_USER_*) iha `.env` "
                    "(password karakter 8 ka liu), depois restart website.", icon=ui.ICON["warning"])
+
+    if config.PUBLIC_GUEST:
+        if st.button("Tama hanesan konvidadu (haree de'it)", icon=":material/visibility:", type="primary", width="stretch"):
+            auth.guest_login()
+            st.rerun()
+        st.caption("Haree dashboard live, monitor real-time, anomaly events, model no Big Data. La presiza konta.",
+                   text_alignment="center")
+
+    if config.PUBLIC_NO_LOGIN:          # public copy: guest view only, no account login
+        st.stop()
 
     with st.container(border=True):
         t_user, t_admin = st.tabs([f"{ui.ICON['user']} User", f"{ui.ICON['admin']} Admin"])

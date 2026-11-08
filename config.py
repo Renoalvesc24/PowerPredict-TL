@@ -75,6 +75,10 @@ LIVE_RETENTION_HOURS = int(env("PP_LIVE_RETENTION_HOURS", "24"))
 
 # --- Website (Streamlit) ------------------------------------------------------
 DASHBOARD_PORT = int(env("PP_DASHBOARD_PORT", "8505"))
+# public website: a "guest" button on the login page gives read-only access without an account
+PUBLIC_GUEST = env("PP_PUBLIC_GUEST", "0") == "1"
+# public copy of the website with NO account login at all (guest view only; admins use the local website)
+PUBLIC_NO_LOGIN = env("PP_PUBLIC_NO_LOGIN", "0") == "1"
 
 TIMEZONE = "Asia/Dili"
 PYTHON = sys.executable

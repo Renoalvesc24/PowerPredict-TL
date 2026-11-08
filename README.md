@@ -140,6 +140,18 @@ Kada pájina iha butaun **Refresh** (karrega dadus foun agora) no sidebar iha **
 | | Jestaun Uzuáriu | Kria konta, muda role, reset password, ativa / dezativa, hamoos | Admin |
 | Informasaun | Metodolojia | Data source, arkitetura, Random Forest (Gini, voting), feature | User, Admin |
 
+## 🌐 Website Publiku (Internet)
+**Link:** https://renoalvesc24.github.io/PowerPredict-TL/ (sistema live bainhira komputadór grupu ativu)
+
+- `start_public.bat` (depois `start_all.bat`) hahú kópia website **konvidadu de'it** iha porta 8510
+  (`PP_PUBLIC_GUEST=1`, `PP_PUBLIC_NO_LOGIN=1`: butaun *Tama hanesan konvidadu*, la iha login), tunnel Cloudflare
+  (HTTPS, la presiza konta), no atualiza link permanente iha GitHub Pages (branch `gh-pages`) ba tunnel foun.
+- Konvidadu haree Dashboard, Monitor, Events, Deteksaun Manual, Model, Big Data no Metodolojia; la iha asesu ba
+  Simulasaun / Jestaun Uzuáriu, no deteksaun manual konvidadu la rai iha database. Admin uza `http://localhost:8505`.
+- **24/7 iha server (Oracle Cloud Always Free, ARM):** `deploy/` iha Docker Compose (Kafka KRaft, MariaDB, FastAPI,
+  Spark Streaming, bot, Streamlit, Caddy HTTPS). Passu: `deploy/ORACLE_SETUP.md` → `bash deploy/make_bundle.sh` →
+  `deploy/remote_setup.sh <domain>` iha server. Internet hetan website (port 80/443) de'it.
+
 ## 📁 Estrutura Folder
 ```
 api/             FastAPI gateway (main.py, schemas.py)

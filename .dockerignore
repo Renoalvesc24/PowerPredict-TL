@@ -1,0 +1,17 @@
+# keep secrets, the database seed, docs and big data out of the application image
+.env
+deploy/server.env
+deploy/db_seed.sql.gz
+deploy/secrets/
+deploy/*.tar.gz
+.git
+.claude
+docs/
+logs/
+data/raw/
+data/lake/
+data/benchmarks/
+data/checkpoints/
+**/__pycache__/
+**/node_modules/
+.pytest_cache/

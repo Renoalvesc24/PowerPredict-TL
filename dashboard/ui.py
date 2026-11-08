@@ -54,6 +54,7 @@ h2 { font-size: 1.35rem !important; padding-top: 0.8rem !important; }
            font-weight: 600; letter-spacing: .02em; margin-left: 6px; }
 .pp-role.admin { background: rgba(235,104,52,0.15); color: #d95926; }
 .pp-role.user { background: rgba(42,120,214,0.15); color: #2a78d6; }
+.pp-role.guest { background: rgba(27,175,122,0.15); color: #199e70; }
 .pp-status { font-size: 0.86rem; margin: 2px 0; }
 .pp-status small { opacity: .65; }
 </style>
@@ -118,7 +119,7 @@ def theme_script() -> None:
 def user_card(user: dict) -> None:
     role = user["role"]
     st.html(f"<div class='pp-user'><b>{user['full_name']}</b><span class='pp-role {role}'>"
-            f"{'ADMIN' if role == 'admin' else 'USER'}</span><br><span>@{user['username']}</span></div>")
+            f"{ {'admin': 'ADMIN', 'guest': 'KONVIDADU'}.get(role, 'USER')}</span><br><span>@{user['username']}</span></div>")
 
 
 def status_line(label: str, ok: bool, extra: str = "") -> None:

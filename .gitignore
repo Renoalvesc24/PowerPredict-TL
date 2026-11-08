@@ -9,6 +9,7 @@ data/checkpoints/
 models/
 logs/
 docs/report_build/node_modules/
+docs/presentation_build/node_modules/
 docs/report_build/review/
 
 # python
@@ -23,3 +24,12 @@ __pycache__/
 ~$*
 *.tmp
 Thumbs.db
+
+# video voice-over script and recordings - kept local, not on GitHub
+docs/video/
+
+# deployment: secrets, database seed and bundles stay local
+deploy/server.env
+deploy/db_seed.sql.gz
+deploy/secrets/
+deploy/*.tar.gz
